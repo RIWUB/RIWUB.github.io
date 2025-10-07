@@ -4,7 +4,7 @@
       {
         img: "Bilder/elkjop.png",
         isSecure: true,
-        explanation: "Legit elkjop vare, på den offisielle nettsiden."
+        explanation: "Legit Elkjøp-vare, på den offisielle nettsiden."
       },
       {
         img: "Bilder/jordans.png",
@@ -14,12 +14,12 @@
       {
         img: "Bilder/pay-pail.png",
         isSecure: false,
-        explanation: "Klassisk phishing. Se på URL-en. Det står pay-pail istedet for pay-pal."
+        explanation: "Klassisk phishing. Se på URL-en. Det står pay-pail istedet for PayPal."
       },
       {
         img: "Bilder/NTNU.png",
         isSecure: true,
-        explanation: "En legit og offisiell ntnu side. Jeg vet ikke hvorfor den består av ren HTML?"
+        explanation: "En legit og offisiell NTNU side. Jeg vet ikke hvorfor den består av ren HTML?"
       }
     ];
 
