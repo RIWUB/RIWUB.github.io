@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Side</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+            color: #222;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        #money {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #007700;
+        }
+  </style>
 </head>
 <body>
     <div class="header">
@@ -12,7 +34,34 @@
     </div>
     <div class="main">
         <div class="main-content">
-            <h1>Her skal det komme en dramatisk teller</h1>
+            <h1>Anslått total svindel av nordmenn siden 1. januar i år:</h1>
+  <div id="money">0,00 kr</div>
+
+  <script>
+    // === KONFIGURASJON ===
+    const YEARLY_INCOME = 2_130_000_000; // 2,13 milliarder kroner
+    const SECONDS_PER_YEAR = 31_556_952; // tropisk år
+    const START_DATE = new Date("2025-01-01T00:00:00Z");
+
+    const KR_PER_SECOND = YEARLY_INCOME / SECONDS_PER_YEAR;
+
+    function formatNumber(num) {
+      return num.toLocaleString("no-NO", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    }
+
+    function updateMoney() {
+      const now = new Date();
+      const secondsElapsed = (now - START_DATE) / 1000;
+      const money = secondsElapsed * KR_PER_SECOND;
+      document.getElementById("money").textContent = formatNumber(money) + " kr";
+    }
+
+    updateMoney(); // første oppdatering
+    setInterval(updateMoney, 333); // 3 ganger per sekund (1000 ms / 3 ≈ 333 ms)
+  </script>
         </div>
         <div class="main-content">
             <h1>Understøttende informasjon</h1>
