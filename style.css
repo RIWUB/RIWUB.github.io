@@ -19,7 +19,18 @@ body {
 }
 
 /* Header and footer */
-.header, .footer {
+.header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 👈 centers content vertically */
+}
+
+
+
+.footer {
   background-color: #222;
   color: white;
   padding: 50px;
@@ -57,4 +68,81 @@ body {
 .main-content p {
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+/* Skjuler menyens tilstandskontroll (checkbox) */
+#menu-toggle {
+  display: none;
+}
+
+/* ☰-ikonet */
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  user-select: none;
+  z-index: 10; /* Sørger for at den ligger over menyen */
+}
+
+/* Hamburger meny ting */
+/* HAMBURGER-MENY – fungerer med <label> og <span> */
+.hamburger-menu {
+  position: relative;
+}
+
+/* Skjul checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger-ikon (de tre strekene) */
+.hamburger-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+.hamburger-label span {
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Meny som vises når hamburger er aktiv */
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #333;
+  width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 5;
+}
+
+.menu a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: #444;
+}
+
+/* Vis meny når checkbox er krysset */
+#menu-toggle:checked + .hamburger-label + .menu {
+  display: flex;
 }
