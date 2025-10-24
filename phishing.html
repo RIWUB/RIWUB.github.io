@@ -23,6 +23,26 @@
           </nav>
       </div>
     </div>
+    <!-- Egen div til pop-up. Innholdet her er usynnlig frem til en viss lengde er scrollet ned på siden -->
+    <div id="scrollPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <h2>Få billetter til Karpe-konsert</h2>
+            <img src="Bilder/karpeKonsert.jpg" alt="Karpe-konsert illustrasjon">
+            <p class="popup-text">Torsdag, 2. juli 2026 opptrer Karpe på Ekebergsletta, i Oslo. Få DAGSPASS til 519,00kr per billett, dette er et enormt tilbud
+                i forhold til Ticketmaster sin pris på 1299,00kr per billett! Tilbudet her er begrenset grunnet stor etterspørsel, sørg å skaff deg
+                en billett før tilbudet utløper.
+            </p>
+            <p id="avgift" class="popup-text">Pris inkluderer 64,00 kr–84,00 kr avgift</p>
+            <br>
+            <h3 id="tilbud" class="popup-text">Tid før tilbudet løper ut!</h3>
+            <div id="countdown" class="countdown">05:00</div>
+            <a href="https://glasswatt.neocities.org/"> <!-- Rar nettside -->
+                <button>Ta meg til bestilling!</button>
+            </a>
+        </div>
+    </div>
+    <!-- Her begynner tekst-innhold av phishing metoder. Standard phishing -->
     <div class="main">
         <div class="main-content">
             <h1>Phishing - hva er det?</h1>
@@ -33,6 +53,7 @@
                 har det kommet flere typer av phishing. Les mer om dette under!
             </p>
         </div>
+        <!-- Phishing via email -->
         <div class="main-content">
             <h1>Phishing - Email</h1>
             <p>Trusselaktører benytter vanligvis email som medium for sine svindelforsøk. Her er det typisk å utgi seg å være en bank,
@@ -42,6 +63,7 @@
                 og mange har lært om eksistensen til denne metoden. Derfor har phishing utviklet seg, og nye former har dannet. 
             </p>
         </div>
+        <!-- Smishing - Phishing via sms -->
         <div class="main-content">
             <h1>Smishing - Phishing gjennom sms</h1>
             <p>Likt som phishing, har smishing hensikt om å få mottakere til å dele sensitiv informasjon. Hovedforskjellen her er at smishing
@@ -51,6 +73,7 @@
                 som vil igjen ende opp med at persondata blir lekket.
             </p>
         </div>
+        <!-- Vishing - Phishing via tale/telefoni -->
         <div class="main-content">
             <h1>Vishing - Voice phishing</h1>
             <p>Bruker trusselaktører vishing som svindelmetode, benytter de telefoni/tale som medium for sine
@@ -60,6 +83,7 @@
                 Her kan svindlere (muligens) etterligne stemmen til noen du stoler på (foreldre, kjæreste, også videre), og deretter dra fordel av tilliten din. 
             </p>
         </div>
+        <!-- Quishing - Phishing via QR-koder -->
         <div class="main-content">
             <h1>Quishing - QR-kode-phishing</h1>
             <p>Skanner du QR-kode uten å tenke deg over hvem som står bak? Nå kan nettopp disse kodene være svindelforsøk og ondsinnet.
@@ -70,6 +94,7 @@
                 sensitiv data. Sjekk alltid hvilken nettside du ender opp på etter å ha skannet en QR-kode. 
             </p>
         </div>
+        <!-- Sjekkliste for å beskyttelse mot phishing -->
         <div class="main-content">
             <h1>Huskeregler for å beskytte deg mot phishing</h1>
             <h3>Du har aldri for dårlig tid til å sjekke</h3>
@@ -81,6 +106,7 @@
             <h3>Ikke skann ukjente QR-koder</h3>
             <p>Å skanne en QR-kode er det samme som å trykke på en link. Ikke scann om du ikke vet hvem som står bak, og sjekk lenken du skanner.</p><br>
         </div>
+        <!-- Videre på nettsiden -->
         <div class="main-content">
             <h1>Videre</h1>
             <p>Flott at du tar deg tid til å lære om sofistikerte svindelforsøk! Videre kan du prøve nettsidens quiz? Eller vil du kanskje
@@ -89,6 +115,6 @@
             </p>
         </div>
     </div>
-
+    <script src="Javascript/popupScript.js"></script>
 </body>
 </html>
