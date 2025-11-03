@@ -12,6 +12,15 @@ html, body {
   color: #333;
 }
 
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
 /* Flexbox layout */
 body {
   display: flex;
