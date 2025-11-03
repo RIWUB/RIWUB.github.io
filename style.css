@@ -213,7 +213,7 @@ button {
 }
 /* Liten effekt som viser bruker at knappen er interaktiv */
 button:hover {
-  background-color: #0357ff;
+  background-color: #0252f2;
   border: 2px solid #003296;
 }
 
