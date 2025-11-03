@@ -5,7 +5,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Intro</title>
       <link rel="stylesheet" href="style.css">
+
       <style>
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
         #money {
             font-size: 3rem;
             font-weight: bold;
@@ -33,104 +38,83 @@
           </nav>
         </div>
       </div>
-
-      <div class="main">
+    </div>
+    <div class="main">
         <div class="main-content">
             <h1>Anslått total svindel av nordmenn siden 1. januar i år:</h1>
         <div id="money">0,00 kr</div>
-      </div>
-      <div class="main-content">
-        <h1>Sjekk det nummeret!</h1>
-        <p>Nummeret over er nesten hake-slepende, men dessverrre ikke oppdiktet! I en analyse utført av Økokrim, har de anslått
-            at svindlere satt igjen med et utbytte på 2,13 milliarder kroner i 2024. Dette er en drastisk oppgang i forhold til
-            2020, hvor nummeret var 864 millioner kroner. Én kan lure på hva nummeret blir på slutten av i år.
-        </p>
-      </div>
 
-      <div class="main-content">
-        <h1>Lær om nettvett på denne nettsiden!</h1>
-        <p>På denne nettsiden kan du lese og lære mer om nettvett. Nettsiden går gjennom forskjellig svindel-metoder, 
-            samt har interaktive elementer som tester om kunnskapen sitter! Gjennomveis vil du se anbefalinger til hva 
-            neste lese-modul kan være, men det er kun anbefalinger og ikke absolutte krav! Kos deg videre med nettsiden,
-            og vi håper du lærer noe nytt!</p>
-      </div>
+  <script>
+    // === KONFIGURASJON ===
+    const YEARLY_INCOME = 2_130_000_000; // 2,13 milliarder kroner
+    const SECONDS_PER_YEAR = 31_556_952; // tropisk år
+    const START_DATE = new Date("2025-01-01T00:00:00Z");
 
-      <div class="main-content">
-        <h1>Hvorfor bry seg om dette?</h1>
-        <p>Første spørsmål én kanskje tenker seg selv er "Hvorfor skal jeg bry meg om dette?". Vi lever i en teknologisk
-            verden, hvor teknologien er stadig under utvikling. Svindel-metoder, hackere, og ondsinnet kode blir mer og mer 
-            sofistikert for dagene som går. For å kunne verne seg selv mot potensiell fare i den digitale verden, må
-            én holde seg oppdatert på de nyeste metodene til svindlere. Dagens ungdom ser kanskje bort fra denne faren,
-            med forsvaret om at de føler seg selvsikre på sine egne nettvett-kunnskaper. Derimot viser statistikk at unge 
-            (i aldersgruppen 18-29 år) er den mest utsatte gruppen på nett når det gjelder svindel. Hensikten med dette
-            prosjektet er derfor å verne dagens ungdoms mot det skumle hav av digitale trusler.</p>
-      </div>
+    const KR_PER_SECOND = YEARLY_INCOME / SECONDS_PER_YEAR;
 
-      <div class="main-content">
-        <h1>Ta lærdom ut av numrene:</h1>
-        <p>Numrene over er ikke til å skremme med, men heller til å benyttes som en læringsmulighet. Disse enorme summene gir
-            oss i samfunnet innblikk på situasjonens alvor. Vi håper tallene hjelper med å annerkjenne de digitale farene, og
-            gir motivasjon til å holde seg oppdatert på nettvett.
-        </p>
-      </div>
+    function formatNumber(num) {
+      return num.toLocaleString("no-NO", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    }
 
-      <div class="main-content">
-        <h1>Quiz: Hva ville du gjort?</h1>
-        <p>Hva bør du gjøre hvis noen truer deg på nett?</p>
-        <button onclick="quizAnswer(true)">Ikke betale og kontakte politiet</button>
-        <button onclick="quizAnswer(false)">Betale for å få det til å stoppe</button>
-        <p id="quiz-result"></p>
-      </div>
+    function updateMoney() {
+      const now = new Date();
+      const secondsElapsed = (now - START_DATE) / 1000;
+      const money = secondsElapsed * KR_PER_SECOND;
+      document.getElementById("money").textContent = formatNumber(money) + " kr";
+    }
 
-      <div class="main-content">
-        <h1>Videre:</h1>  
-        <p>Aller først: Gratulerer med første, fullførte lese-modul. Vi håper du har lært noe nytt, og er ivrig på å lære deg
-            mer! Du kan navigere fritt gjennom nettsiden, og ta alt i tempoet du selv ønsker. Vil du lese mer, men er usikker
-            på hva? Kan vi foreslå (mulig) ny kunnskap om phishing?
-        </p>
-        <button><a href="intro.html">Gå Videre</a></button>
-      </div>
+    updateMoney(); // første oppdatering
+    setInterval(updateMoney, 333); // 3 ganger per sekund (1000 ms / 3 ≈ 333 ms)
+  </script>
+        </div>
+        <div class="main-content">
+            <h1>Sjekk det nummeret!</h1>
+            <p>Nummeret over er nesten hake-slepende, men dessverrre ikke oppdiktet! I en analyse utført av Økokrim, har de anslått
+                at svindlere satt igjen med et utbytte på 2,13 milliarder kroner i 2024. Dette er en drastisk oppgang i forhold til
+                2020, hvor nummeret var 864 millioner kroner. Én kan lure på hva nummeret blir på slutten av i år.
+            </p>
+        </div>
+        <div class="main-content">
+            <h1>Lær om nettvett på denne nettsiden!</h1>
+            <p>På denne nettsiden kan du lese og lære mer om nettvett. Nettsiden går gjennom forskjellig svindel-metoder, 
+                samt har interaktive elementer som tester om kunnskapen sitter! Gjennomveis vil du se anbefalinger til hva 
+                neste lese-modul kan være, men det er kun anbefalinger og ikke absolutte krav! Kos deg videre med nettsiden,
+                og vi håper du lærer noe nytt!</p>
+        </div>
+        <div class="main-content">
+            <h1>Hvorfor bry seg om dette?</h1>
+            <p>Første spørsmål én kanskje tenker seg selv er "Hvorfor skal jeg bry meg om dette?". Vi lever i en teknologisk
+                verden, hvor teknologien er stadig under utvikling. Svindel-metoder, hackere, og ondsinnet kode blir mer og mer 
+                sofistikert for dagene som går. For å kunne verne seg selv mot potensiell fare i den digitale verden, må
+                én holde seg oppdatert på de nyeste metodene til svindlere. Dagens ungdom ser kanskje bort fra denne faren,
+                med forsvaret om at de føler seg selvsikre på sine egne nettvett-kunnskaper. Derimot viser statistikk at unge 
+                (i aldersgruppen 18-29 år) er den mest utsatte gruppen på nett når det gjelder svindel. Hensikten med dette
+                prosjektet er derfor å verne dagens ungdoms mot det skumle hav av digitale trusler.</p>
+        </div>
+        <div class="main-content">
+            <h1>Ta lærdom ut av numrene:</h1>
+            <p>Numrene over er ikke til å skremme med, men heller til å benyttes som en læringsmulighet. Disse enorme summene gir
+                oss i samfunnet innblikk på situasjonens alvor. Vi håper tallene hjelper med å annerkjenne de digitale farene, og
+                gir motivasjon til å holde seg oppdatert på nettvett.
+            </p>
+        </div>
+        <div class="main-content">
+            <h1>Videre:</h1>
+            <p>Aller først: Gratulerer med første, fullførte lese-modul. Vi håper du har lært noe nytt, og er ivrig på å lære deg
+                mer! Du kan navigere fritt gjennom nettsiden, og ta alt i tempoet du selv ønsker. Vil du lese mer, men er usikker
+                på hva? Kan vi foreslå (mulig) ny kunnskap om phishing?
+            </p>
+        </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fff5993dd20d3e19e5a3e9f24f1fddb0f722b5f7
     <div class="footer">
       <p>Føtter, nammmm</p>
     </div>
-
-    <script>      
-      // === QUIZ ===
-      function quizAnswer(correct) {
-        const result = document.getElementById("quiz-result");
-        if (correct) {
-          result.textContent = "✅ Riktig! Ikke betal — kontakt politiet.";
-          result.style.color = "green";
-        } else {
-          result.textContent = "❌ Feil. Å betale gjør deg bare mer sårbar.";
-          result.style.color = "red";
-        }
-      }
-
-      // === MONEYCOUNTER ===
-      const YEARLY_INCOME = 2_130_000_000; // 2,13 milliarder kroner
-      const SECONDS_PER_YEAR = 31_556_952; // tropisk år
-      const START_DATE = new Date("2025-01-01T00:00:00Z");
-      const KR_PER_SECOND = YEARLY_INCOME / SECONDS_PER_YEAR;
-
-      function formatNumber(num) {
-        return num.toLocaleString("no-NO", {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        });
-      }
-
-      function updateMoney() {
-        const now = new Date();
-        const secondsElapsed = (now - START_DATE) / 1000;
-        const money = secondsElapsed * KR_PER_SECOND;
-        document.getElementById("money").textContent = formatNumber(money) + " kr";
-      }
-
-      updateMoney(); // første oppdatering
-      setInterval(updateMoney, 333); // 3 ganger per sekund (1000 ms / 3 ≈ 333 ms)
-    </script>
   </body>
 </html>
