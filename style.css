@@ -108,8 +108,6 @@ body {
   user-select: none;
 }
 
-
-
 .hamburger-label span {
   height: 4px;
   background-color: white;
@@ -132,8 +130,8 @@ body {
 }
 
 .menu a {
-  color: #ffffff;
-  padding: 13px 16px;
+  color: white;
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
@@ -145,4 +143,84 @@ body {
 /* Vis meny når checkbox er krysset */
 #menu-toggle:checked + .hamburger-label + .menu {
   display: flex;
+}
+/* Tittel til nedtelling */
+#tilbud {
+  color: #024ddf;
+  text-align: left;
+}
+
+.popup {
+  display: none; /* Skjult pop-up, altså at den ikke er synlig før bruker blar ned */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+/* Enda mer om pop-up */
+.popup-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 70vw; 
+  max-width: 700px; 
+  height: auto; 
+  max-height: 90vh; 
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow-y: auto;
+}
+.popup-content img{
+  height: auto;
+  max-width: 70%;
+  max-height: 60%;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+/* Ville ha teksten venstre-orientert */
+.popup-text {
+  text-align: left
+}
+/* Til avgift av hovedpris */
+#avgift {
+  color: #5a5a5a;
+  font-size: 12px;
+  opacity: 80%;
+}
+/* Tilbuds-nedtelling */
+.countdown {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #024ddf;
+  margin: 10px 0 20px 0;
+  text-align: left;
+}
+/* Knapp som lenker videre til hvor helst ute på det verdens vide vebb */
+button {
+  background-color: #024ddf;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 14px 31px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+/* Liten effekt som viser bruker at knappen er interaktiv */
+button:hover {
+  background-color: #0357ff;
+  border: 2px solid #003296;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
