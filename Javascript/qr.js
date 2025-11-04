@@ -35,3 +35,10 @@ window.addEventListener("scroll", () => {
     targetOffset = 0;
   }, 150);
 });
+
+const updateQrVisibility = () => {
+    qrContainer.style.display = window.innerWidth <= 768 ? "none" : "";
+};
+
+updateQrVisibility();
+window.addEventListener("resize", updateQrVisibility);
