@@ -1,48 +1,94 @@
-/* Reset and base setup */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-html,
-body {
+/* === RESET & BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
   height: 100%;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f2f2f2;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
   color: #333;
 }
 body { display: flex; flex-direction: column; }
 
-/* === HEADER & FOOTER === */
-.header, .footer {
+/* === HEADER === */
+.header {
   background: #222;
   color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* === NAVIGATION BAR === */
+.nav-bar {
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #024ddf;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-.header { padding: 20px; }
-.footer { padding: 40px 20px; text-align: center; }
-
-.footer {
-  background-color: #222;
-  color: white;
-  padding: 50px;
-  text-align: left;
+  gap: 8px;
 }
 
-/* Main area takes remaining space */
+.nav-bar a:hover {
+  background-color: #e9efff;
+  border-bottom-color: #024ddf;
+}
+
+.nav-bar a.active {
+  background-color: #cddcff;
+  border-bottom-color: #024ddf;
+  font-weight: 600;
+  color: #002c97;
+}
+
+.nav-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #024ddf;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.nav-bar a.active .nav-number {
+  background: #002c97;
+}
+
+/* === MAIN CONTENT === */
 .main {
   flex: 1;
   display: flex;
-  flex-direction: column; /* ⬅️ Stack children vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px;
-  gap: 60px; /* Space between boxes */
+  gap: 40px;
 }
 
-/* Inner content box */
 .main-content {
   background: #fff;
   padding: 40px;
@@ -52,118 +98,107 @@ body { display: flex; flex-direction: column; }
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   text-align: left;
 }
-.main-content h1 { font-size: 2rem; margin-bottom: 20px; }
-.main-content p { font-size: 1.1rem; line-height: 1.6; }
-#tilbud, .countdown { color: #024ddf; font-weight: bold; }
 
-/* === BUTTONS === */
-button {
+.main-content h1 { 
+  font-size: 2rem; 
+  margin-bottom: 20px;
+  color: #024ddf;
+}
+
+.main-content h2 { 
+  font-size: 1.5rem; 
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.main-content p { 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+  margin-bottom: 15px;
+}
+
+#money {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007700;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* === BOTTOM NAVIGATION === */
+.bottom-nav {
+  background: #fff;
+  border-top: 2px solid #e0e0e0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-btn {
   background: #024ddf;
   border: 2px solid transparent;
   border-radius: 8px;
   color: #fff;
-  padding: 12px 28px;
+  padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
   transition: 0.25s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-button:hover {
+
+.nav-btn:hover {
   background: #0252f2;
   border-color: #003296;
 }
 
-/* === POPUP === */
-.popup {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
+.nav-btn.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
 }
-.popup-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 700px;
-  width: 80vw;
-  max-height: 90vh;
+
+.page-indicator {
+  font-size: 1rem;
+  color: #666;
   text-align: center;
-  overflow-y: auto;
-  position: relative;
-}
-.popup-content img {
-  max-width: 70%;
-  border-radius: 4px;
-  margin: 0 auto;
-}
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
 }
 
-/* Hamburger menu container */
-.hamburger-menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  z-index: 30;
+/* === FOOTER === */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-/* Hide checkbox */
-#menu-toggle { display: none; }
-
-/* Hamburger icon */
-.hamburger-label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 32px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 35;
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-bar {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  
+  .nav-bar a {
+    flex-shrink: 0;
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .bottom-nav {
+    flex-direction: column;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
-
-.hamburger-label span {
-  height: 3.5px;
-  background-color: #024ddf;
-  border-radius: 2px;
-  transition: all 0.35s ease;
-}
-
-/* Meny som vises når hamburger er aktiv */
-.menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #333;
-  width: 180px;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 5;
-}
-
-/* Sliding menu panel below header */
-/* Sliding menu panel below header */
-/* Header needs to be the positioning context */
-.header { 
-  padding: 20px; 
-  position: relative;  /* ADD THIS */
-}
-
-/* Hamburger menu container */
-.hamburger-menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  z-index: 30;
-}
-
 #qr-container {
   position: fixed;
   z-index: 1000;

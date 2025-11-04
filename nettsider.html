@@ -3,200 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tittel</title>
+    <title>3. Usikre nettsider – Nettvett</title>
     <link rel="stylesheet" href="style.css" />
 
     <style>
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+      .main-content img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
-
-      .quiz-question {
-        display: none;
-        margin-bottom: 1.5rem;
-      }
-
-      .quiz-question.active {
-        display: block;
-      }
-
-      .quiz-feedback {
-        margin-top: 1rem;
-        padding: 1rem;
-        border-radius: 5px;
-        font-weight: bold;
-      }
-
-      .quiz-feedback.correct {
-        background-color: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
-      }
-
-      .quiz-feedback.incorrect {
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-      }
-
-      .quiz-button {
-        margin-top: 1rem;
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-
-      .quiz-button:hover {
-        background-color: #0056b3;
-      }
-
-      .quiz-button:disabled {
-        background-color: #6c757d;
-        cursor: not-allowed;
-      }
-
-      .quiz-results {
-        display: none;
-        padding: 1.5rem;
-        background-color: #e7f3ff;
-        border-radius: 5px;
+      .image-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
         margin-top: 1rem;
       }
-
-      .quiz-results.show {
-        display: block;
-      }
-
-      .quiz-progress {
-        margin-bottom: 1rem;
-        font-weight: bold;
-        color: #333;
-      }
-
-      fieldset {
-        border: none;
-        padding: 0;
-      }
-
-      legend {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        font-weight: bold;
-      }
-
-      label {
-        display: block;
-        margin: 0.5rem 0;
-        cursor: pointer;
-      }
-
-      input[type="radio"] {
-        margin-right: 0.5rem;
-        cursor: pointer;
+      .image-row img {
+        width: 200px;
+        max-width: 90%;
       }
     </style>
   </head>
+
   <body>
+    <!-- HEADER -->
     <div class="header">
-      <h1>Intro på index</h1>
-      <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger-label">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <nav class="menu">
-          <a href="index.html">Hjem</a>
-          <a href="om.html">Om oss</a>
-          <a href="kontakt.html">Kontakt</a>
-          <a href="nettsider.html">Sussy nettsider</a>
-        </nav>
-      </div>
+      <h1>Nettvett for Ungdom</h1>
+      <p>Lær å beskytte deg mot svindel på nett</p>
     </div>
+
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <a href="index.html">
+        <span class="nav-number">1</span>
+        Intro
+      </a>
+      <a href="passord.html">
+        <span class="nav-number">2</span>
+        Passord
+      </a>
+      <a href="nettsider.html" class="active">
+        <span class="nav-number">3</span>
+        Usikre nettsider
+      </a>
+      <a href="phishing.html">
+        <span class="nav-number">4</span>
+        Phishing
+      </a>
+      <a href="utpressing.html">
+        <span class="nav-number">5</span>
+        Utpressing
+      </a>
+      <a href="avslutning.html">
+        <span class="nav-number">6</span>
+        Avslutning
+      </a>
+    </nav>
+
+    <!-- MAIN -->
     <div class="main">
-      <div id="qr-container">
-        <img src="Bilder/qr.png" alt="QR Code" />
-      </div>
       <div class="main-content">
         <h1>Kjennetegn på usikre nettsider</h1>
         <p>
           Et første kjennetegn for usikre nettsider er om lenken begynner med
-          http, og ikke https. Det dette betyr er at forbindelsen din til dette
-          nettstedet ikke er kryptert, altså at all trafikk mellom deg og
-          nettstedet kan hentes ut og leses av andre. Heldigvis vil moderne
-          nettlesere gi en advarsel om dette er tilfellet, og stoppe deg før du
-          kommer til nettstedet. Innen du begynner å finne unntak til denne
-          regelen om å unngå http, er du nok kompetent nok til å ikke trenge
-          denne leksjonen.
+          <strong>http</strong>, og ikke <strong>https</strong>. Det betyr at
+          forbindelsen din til nettstedet ikke er kryptert, så trafikk mellom
+          deg og siden kan hentes ut og leses av andre. Heldigvis advarer
+          moderne nettlesere deg om slike sider. Hvis du likevel finner unntak
+          til denne regelen, er du trolig allerede trygg på nettvett!
         </p>
-        <div style="display: flex; justify-content: center; margin-top: 20px">
-          <img src="Bilder/http.png" style="width: 500px" alt="http vs https" />
+        <div style="text-align: center; margin-top: 20px;">
+          <img src="Bilder/http.png" alt="HTTP vs HTTPS" style="max-width: 500px; width: 100%;" />
         </div>
       </div>
 
       <div class="main-content">
-        <h1>"Er dette for godt til å være sant?"</h1>
+        <h1>“Er dette for godt til å være sant?”</h1>
         <p>
-          Dette er et spørsmål du bør stille deg selv ofte når du surfer på
-          nettet. Finner du plutselig 85% rabatt på produktet du ønsket, og
-          kjøper på impuls? Da får du nok i beste fall en billig kopi, og i
-          verste fall kortinformasjonen din stjålet.
+          Dette spørsmålet bør du stille deg selv ofte når du surfer på nettet.
+          Finner du plutselig 85% rabatt på produktet du ønsket og kjøper på
+          impuls? Da får du i beste fall en billig kopi, og i verste fall får
+          svindlere tak i kortinformasjonen din.
         </p>
-        <div style="display: flex; justify-content: center; margin-top: 20px">
-          <img
-            src="Bilder/gooddeal.png"
-            style="width: 500px"
-            alt="for godt til å være sant"
-          />
+        <div style="text-align: center; margin-top: 20px;">
+          <img src="Bilder/gooddeal.png" alt="For godt til å være sant" style="max-width: 500px; width: 100%;" />
         </div>
       </div>
 
       <div class="main-content">
         <h1>Sjekk nettadressen nøye</h1>
         <p>
-          En av de vanligere svindlene kommer over at du bli lurt til å skrive
-          inn innloggingsinformasjonen din på en falsk side. Her er en ekstra
-          sårbar om du har lagret kortinformasjonen din på forskjellige
-          tjenester. Du tenker kanskje at det ikke er så farlig at
-          Netflix-passordet ditt lekket, men husk at betalingsinformasjonen din
-          ligger på flere brukere, så selv mindre «verdifulle» passord kan gi
-          større lekkasjer enn du tror.
+          En vanlig svindelmetode er å lure deg til å skrive inn innloggingsinformasjonen din på en falsk side. Dette
+          er ekstra farlig hvis du har lagret kortinformasjonen din på ulike tjenester. Du tenker kanskje at det ikke
+          gjør noe om Netflix-passordet ditt lekkes, men husk at betalingsinformasjonen kan være koblet til kontoen —
+          selv “uskyldige” passord kan gi større konsekvenser enn du tror.
         </p>
-        <div
-          style="
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin-top: 20px;
-          "
-        >
-          <img
-            src="Bilder/fakeNetflix.png"
-            style="width: 200px"
-            alt="fake Netflix login"
-          />
-          <img
-            src="Bilder/fakeInsta.png"
-            style="width: 200px"
-            alt="fake Facebook login"
-          />
-          <img
-            src="Bilder/fakeFacebook.png"
-            style="width: 200px"
-            alt="fake Facebook login"
-          />
+        <div class="image-row">
+          <img src="Bilder/fakeNetflix.png" alt="Falsk Netflix-innlogging" />
+          <img src="Bilder/fakeInsta.png" alt="Falsk Instagram-innlogging" />
+          <img src="Bilder/fakeFacebook.png" alt="Falsk Facebook-innlogging" />
         </div>
       </div>
+
+      <div class="main-content">
+        <h1>Tips for å holde deg trygg</h1>
+        <ul>
+          <li>Se etter <strong>https</strong> i adresselinjen før du skriver inn informasjon.</li>
+          <li>Vær skeptisk til tilbud som virker for gode til å være sanne.</li>
+          <li>Sjekk stavemåten i nettadressen – små forskjeller kan avsløre svindel.</li>
+          <li>Bruk antivirus og hold nettleseren oppdatert.</li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <h1>Videre</h1>
+        <p>
+          Bra jobba! Du har lært å gjenkjenne usikre nettsider og forstå farene
+          ved å være uoppmerksom. Neste tema tar for seg <strong>phishing</strong>
+          – en av de mest utbredte metodene for svindel på nett.
+        </p>
+      </div>
     </div>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="passord.html" class="nav-btn">← Forrige</a>
+      <div class="page-indicator">
+        Side <strong>3</strong> av <strong>6</strong>
+      </div>
+      <a href="phishing.html" class="nav-btn">Neste →</a>
+    </div>
+
+    <!-- FOOTER -->
     <div class="footer">
-      <p>Føtter, nammmm</p>
+      <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
     </div>
+
     <script src="Javascript/qr.js"></script>
   </body>
 </html>
