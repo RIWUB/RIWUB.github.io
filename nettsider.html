@@ -3,84 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tittel</title>
+    <title>3. Usikre nettsider – Nettvett</title>
     <link rel="stylesheet" href="style.css" />
 
     <style>
       h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
-      }
-
-      .quiz-question {
-        display: none;
-        margin-bottom: 1.5rem;
-      }
-
-      .quiz-question.active {
-        display: block;
-      }
-
-      .quiz-feedback {
-        margin-top: 1rem;
-        padding: 1rem;
-        border-radius: 5px;
-        font-weight: bold;
-      }
-
-      .quiz-feedback.correct {
-        background-color: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
-      }
-
-      .quiz-feedback.incorrect {
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-      }
-
-      .quiz-button {
-        margin-top: 1rem;
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-
-      .quiz-button:hover {
-        background-color: #0056b3;
-      }
-
-      .quiz-button:disabled {
-        background-color: #6c757d;
-        cursor: not-allowed;
-      }
-
-      .quiz-results {
-        display: none;
-        padding: 1.5rem;
-        background-color: #e7f3ff;
-        border-radius: 5px;
-        margin-top: 1rem;
-      }
-
-      .quiz-results.show {
-        display: block;
-      }
-
-      .quiz-progress {
-        margin-bottom: 1rem;
-        font-weight: bold;
-        color: #333;
-      }
-
-      fieldset {
-        border: none;
-        padding: 0;
       }
 
       legend {
@@ -95,31 +24,79 @@
         cursor: pointer;
       }
 
-      input[type="radio"] {
-        margin-right: 0.5rem;
-        cursor: pointer;
+      .fakeURLs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .picture {
+        width: 500px;
+      }
+
+      @media (max-width: 480px) {
+        .fakeURLs {
+          flex-direction: column;
+          align-items: space-evenly;
+        }
+
+        .picture {
+          width: 300px;
+        }
+
+        .fakeURLsContainer {
+            display: flex;
+            justify-content: center;
+        }
       }
     </style>
   </head>
+
   <body>
+    <!-- HEADER -->
     <div class="header">
-      <h1>Intro på index</h1>
-      <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger-label">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <nav class="menu">
-          <a href="index.html">Hjem</a>
-          <a href="om.html">Om oss</a>
-          <a href="kontakt.html">Kontakt</a>
-          <a href="nettsider.html">Sussy nettsider</a>
-        </nav>
-      </div>
+      <h1>Nettvett for Ungdom</h1>
+      <p>Lær å beskytte deg mot svindel på nett</p>
     </div>
-    <div class="main">
+
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <a href="index.html">
+        <span class="nav-number">1</span>
+        Intro
+      </a>
+      <a href="passord.html">
+        <span class="nav-number">2</span>
+        Passord
+      </a>
+      <a href="nettsider.html" class="active">
+        <span class="nav-number">3</span>
+        Usikre nettsider
+      </a>
+      <a href="phishing.html">
+        <span class="nav-number">4</span>
+        Phishing
+      </a>
+      <a href="spoofing.html">
+        <span class="nav-number">5</span>
+        spoofing
+      </a>
+      <a href="offentligWifi.html">
+        <span class="nav-number">6</span>
+        spoofing
+      </a>
+      <a href="utpressing.html">
+        <span class="nav-number">7</span>
+        Utpressing
+      </a>
+      <a href="avslutning.html">
+        <span class="nav-number">8</span>
+        Avslutning
+      </a>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="main">      
       <div id="qr-container">
         <img src="Bilder/qr.png" alt="QR Code" />
       </div>
@@ -136,7 +113,7 @@
           denne leksjonen.
         </p>
         <div style="display: flex; justify-content: center; margin-top: 20px">
-          <img src="Bilder/http.png" style="width: 500px" alt="http vs https" />
+          <img src="Bilder/http.png" class="picture" alt="http vs https" />
         </div>
       </div>
 
@@ -151,7 +128,7 @@
         <div style="display: flex; justify-content: center; margin-top: 20px">
           <img
             src="Bilder/gooddeal.png"
-            style="width: 500px"
+            class="picture"
             alt="for godt til å være sant"
           />
         </div>
@@ -168,35 +145,42 @@
           ligger på flere brukere, så selv mindre «verdifulle» passord kan gi
           større lekkasjer enn du tror.
         </p>
-        <div
-          style="
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin-top: 20px;
-          "
-        >
-          <img
-            src="Bilder/fakeNetflix.png"
-            style="width: 200px"
-            alt="fake Netflix login"
-          />
-          <img
-            src="Bilder/fakeInsta.png"
-            style="width: 200px"
-            alt="fake Facebook login"
-          />
-          <img
-            src="Bilder/fakeFacebook.png"
-            style="width: 200px"
-            alt="fake Facebook login"
-          />
+        <div class="fakeURLsContainer">
+          <div class="fakeURLs">
+            <img
+              src="Bilder/fakeNetflix.png"
+              style="width: 200px; margin-top: 20px"
+              alt="fake Netflix"
+            />
+            <img
+              src="Bilder/fakeInsta.png"
+              style="width: 200px; margin-top: 20px"
+              alt="fake Instagram"
+            />
+            <img
+              src="Bilder/fakeFacebook.png"
+              style="width: 200px; margin-top: 20px"
+              alt="fake Facebook"
+            />
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer">
-      <p>Føtter, nammmm</p>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="passord.html" class="nav-btn">← Forrige</a>
+      <div class="page-indicator">
+        Side <strong>3</strong> av <strong>6</strong>
+      </div>
+      <a href="phishing.html" class="nav-btn">Neste →</a>
     </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
+    </div>
+
     <script src="Javascript/qr.js"></script>
   </body>
 </html>

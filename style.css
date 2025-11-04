@@ -1,151 +1,207 @@
-/* Reset and base setup */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-html,
-body {
+/* === RESET & BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
   height: 100%;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f2f2f2;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
   color: #333;
 }
+body { display: flex; flex-direction: column; }
 
-/* Flexbox layout */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header and footer */
+/* === HEADER === */
 .header {
-  background-color: #222;
-  color: white;
+  background: #222;
+  color: #fff;
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* 👈 centers content vertically */
-}
-
-
-
-.footer {
-  background-color: #222;
-  color: white;
-  padding: 50px;
   text-align: center;
 }
 
-/* Main area takes remaining space */
+.header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* === NAVIGATION BAR === */
+.nav-bar {
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #024ddf;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-bar a:hover {
+  background-color: #e9efff;
+  border-bottom-color: #024ddf;
+}
+
+
+
+.nav-bar a.active {
+  background-color: #cddcff;
+  border-bottom-color: #024ddf;
+  font-weight: 600;
+  color: #002c97;
+}
+
+.nav-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #024ddf;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.nav-bar a.active .nav-number {
+  background: #002c97;
+}
+
+/* === MAIN CONTENT === */
 .main {
   flex: 1;
   display: flex;
-  flex-direction: column;   /* ⬅️ Stack children vertically */
-  align-items: center;      /* Center horizontally */
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px;
-  gap: 60px;                /* Space between boxes */
+  gap: 40px;
 }
 
 
-/* Inner content box */
 .main-content {
-  background-color: white;
+  background: #fff;
   padding: 40px;
-  max-width: 100vh;
+  max-width: 800px;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   text-align: left;
 }
 
-/* Typography */
-.main-content h1 {
-  font-size: 2rem;
+.main-content h1 { 
+  font-size: 2rem; 
   margin-bottom: 20px;
+  color: #024ddf;
 }
 
-.main-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.main-content h2 { 
+  font-size: 1.5rem; 
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
-/* Skjuler menyens tilstandskontroll (checkbox) */
-#menu-toggle {
-  display: none;
+.main-content p { 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+  margin-bottom: 15px;
 }
 
-/* ☰-ikonet */
-.hamburger {
-  font-size: 1.8rem;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  user-select: none;
-  z-index: 10; /* Sørger for at den ligger over menyen */
+#money {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007700;
+  text-align: center;
+  padding: 20px 0;
 }
 
-/* Hamburger meny ting */
-/* HAMBURGER-MENY – fungerer med <label> og <span> */
-.hamburger-menu {
-  position: relative;
-}
-
-/* Skjul checkbox */
-#menu-toggle {
-  display: none;
-}
-
-/* Hamburger-ikon (de tre strekene) */
-.hamburger-label {
+/* === BOTTOM NAVIGATION === */
+.bottom-nav {
+  background: #fff;
+  border-top: 2px solid #e0e0e0;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 22px;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-btn {
+  background: #024ddf;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
   cursor: pointer;
-  user-select: none;
-}
-
-.hamburger-label span {
-  height: 4px;
-  background-color: white;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-/* Meny som vises når hamburger er aktiv */
-.menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #333;
-  width: 180px;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 5;
-}
-
-.menu a {
-  color: white;
-  padding: 12px 16px;
+  transition: 0.25s;
   text-decoration: none;
-  display: block;
-}
-
-.menu a:hover {
-  background-color: #444;
-}
-
-/* Vis meny når checkbox er krysset */
-#menu-toggle:checked + .hamburger-label + .menu {
   display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.nav-btn:hover {
+  background: #0252f2;
+  border-color: #003296;
+}
+
+.nav-btn.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.page-indicator {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+/* === FOOTER === */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-bar {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  
+  .nav-bar a {
+    flex-shrink: 0;
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .bottom-nav {
+    flex-direction: column;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 #qr-container {
   position: fixed;
   z-index: 1000;
