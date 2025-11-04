@@ -24,6 +24,31 @@
         cursor: pointer;
       }
 
+      .fakeURLs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .picture {
+        width: 500px;
+      }
+
+      @media (max-width: 480px) {
+        .fakeURLs {
+          flex-direction: column;
+          align-items: space-evenly;
+        }
+
+        .picture {
+          width: 300px;
+        }
+
+        .fakeURLsContainer {
+            display: flex;
+            justify-content: center;
+        }
+      }
     </style>
   </head>
   <body>
@@ -61,7 +86,7 @@
           denne leksjonen.
         </p>
         <div style="display: flex; justify-content: center; margin-top: 20px">
-          <img src="Bilder/http.png" style="width: 500px" alt="http vs https" />
+          <img src="Bilder/http.png" class="picture" alt="http vs https" />
         </div>
       </div>
 
@@ -76,7 +101,7 @@
         <div style="display: flex; justify-content: center; margin-top: 20px">
           <img
             src="Bilder/gooddeal.png"
-            style="width: 500px"
+            class="picture"
             alt="for godt til å være sant"
           />
         </div>
@@ -93,29 +118,24 @@
           ligger på flere brukere, så selv mindre «verdifulle» passord kan gi
           større lekkasjer enn du tror.
         </p>
-        <div
-          style="
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin-top: 20px; 
-          "
-        >
-          <img
-            src="Bilder/fakeNetflix.png"
-            style="width: 200px"
-            alt="fake Netflix login"
-          />
-          <img
-            src="Bilder/fakeInsta.png"
-            style="width: 200px"
-            alt="fake Facebook login"
-          />
-          <img
-            src="Bilder/fakeFacebook.png"
-            style="width: 200px"
-            alt="fake Facebook login"
-          />
+        <div class="fakeURLsContainer">
+          <div class="fakeURLs">
+            <img
+              src="Bilder/fakeNetflix.png"
+              style="width: 200px; margin-top: 20px"
+              alt="fake Netflix"
+            />
+            <img
+              src="Bilder/fakeInsta.png"
+              style="width: 200px; margin-top: 20px"
+              alt="fake Instagram"
+            />
+            <img
+              src="Bilder/fakeFacebook.png"
+              style="width: 200px; margin-top: 20px"
+              alt="fake Facebook"
+            />
+          </div>
         </div>
       </div>
     </div>
