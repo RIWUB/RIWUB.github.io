@@ -5,9 +5,10 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #f2f2f2;
   color: #333;
 }
@@ -28,8 +29,6 @@ body {
   align-items: center; /* 👈 centers content vertically */
 }
 
-
-
 .footer {
   background-color: #222;
   color: white;
@@ -41,12 +40,11 @@ body {
 .main {
   flex: 1;
   display: flex;
-  flex-direction: column;   /* ⬅️ Stack children vertically */
-  align-items: center;      /* Center horizontally */
+  flex-direction: column; /* ⬅️ Stack children vertically */
+  align-items: center; /* Center horizontally */
   padding: 60px 20px;
-  gap: 60px;                /* Space between boxes */
+  gap: 60px; /* Space between boxes */
 }
-
 
 /* Inner content box */
 .main-content {
@@ -108,8 +106,6 @@ body {
   user-select: none;
 }
 
-
-
 .hamburger-label span {
   height: 4px;
   background-color: white;
@@ -127,7 +123,7 @@ body {
   background-color: #333;
   width: 180px;
   border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 5;
 }
 
@@ -145,4 +141,21 @@ body {
 /* Vis meny når checkbox er krysset */
 #menu-toggle:checked + .hamburger-label + .menu {
   display: flex;
+}
+
+#qr-container {
+  position: fixed;
+  z-index: 1000;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out;
+}
+
+#qr-container img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
