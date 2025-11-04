@@ -3,38 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tittel</title>
+    <title>1. Intro – Nettvett</title>
     <link rel="stylesheet" href="style.css" />
-
     <style>
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
       #money {
         font-size: 3rem;
         font-weight: bold;
         color: #007700;
       }
+      #qr-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      #qr-container img {
+        max-width: 220px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
     </style>
   </head>
+
   <body>
+    <!-- HEADER -->
     <div class="header">
-      <h1>Intro på indexxxx</h1>
-      <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger-label">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <nav class="menu">
-          <a href="index.html">Hjem</a>
-          <a href="om.html">Om oss</a>
-          <a href="kontakt.html">Kontakt</a>
-        </nav>
-      </div>
+      <h1>Nettvett for Ungdom</h1>
+      <p>Lær å beskytte deg mot svindel på nett</p>
     </div>
+
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <a href="index.html" class="active">
+        <span class="nav-number">1</span>
+        Intro
+      </a>
+      <a href="passord.html">
+        <span class="nav-number">2</span>
+        Passord
+      </a>
+      <a href="nettsider.html">
+        <span class="nav-number">3</span>
+        Usikre nettsider
+      </a>
+      <a href="phishing.html">
+        <span class="nav-number">4</span>
+        Phishing
+      </a>
+      <a href="spoofing.html">
+        <span class="nav-number">5</span>
+        spoofing
+      </a>
+      <a href="offentligWifi.html">
+        <span class="nav-number">6</span>
+        spoofing
+      </a>
+      <a href="utpressing.html">
+        <span class="nav-number">7</span>
+        Utpressing
+      </a>
+      <a href="avslutning.html">
+        <span class="nav-number">8</span>
+        Avslutning
+      </a>
+    </nav>
+
+    <!-- MAIN -->
     <div class="main">
       <div id="qr-container">
         <img src="Bilder/qr.png" alt="QR Code" />
@@ -128,9 +162,21 @@
         </p>
       </div>
     </div>
-    <div class="footer">
-      <p>Føtter, nammmm</p>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="#" class="nav-btn disabled">← Forrige</a>
+      <div class="page-indicator">
+        Side <strong>1</strong> av <strong>6</strong>
+      </div>
+      <a href="passord.html" class="nav-btn">Neste →</a>
     </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
+    </div>
+
     <script src="Javascript/qr.js"></script>
   </body>
 </html>
