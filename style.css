@@ -219,10 +219,6 @@ body { display: flex; flex-direction: column; }
   object-fit: contain;
 }
 
-/* Vis meny når checkbox er krysset */
-#menu-toggle:checked + .hamburger-label + .menu {
-  display: flex;
-}
 /* Tittel til nedtelling */
 #tilbud {
   color: #024ddf;
