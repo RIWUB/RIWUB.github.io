@@ -247,3 +247,8 @@ button:hover {
   font-size: 24px;
   cursor: pointer;
 }
+#disclaimer {
+  color: #5a5a5a;
+  font-size: 12px;
+  opacity: 80%;
+}
