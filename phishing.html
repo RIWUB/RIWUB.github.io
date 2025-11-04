@@ -1,94 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phishing</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="header">
-      <h1>Phishing</h1> 
+      <h1>Phishing</h1>
       <div class="hamburger-menu">
-          <input type="checkbox" id="menu-toggle">
-          <label for="menu-toggle" class="hamburger-label">
-              <span></span>
-              <span></span>
-              <span></span>
-          </label>
-          <nav class="menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="menu">
           <a href="index.html">Hjem</a>
           <a href="om.html">Om oss</a>
           <a href="kontakt.html">Kontakt</a>
-          </nav>
+        </nav>
       </div>
     </div>
     <div class="main">
-        <div class="main-content">
-            <h1>Phishing - hva er det?</h1>
-            <p>Phishing er en kjent svindelmetode som kommer i forskjellige varianter. Denne svindelmetoden er sterkt knyttet til sosial
-                manipulering, med hensikt å få noen til å dele sensitiv informasjon. Trusselaktører utgir seg for å være en troverdig og
-                legitim kilde, slik at én deler sensitiv informasjon som i prinsippet skal holdes privat. Phishing-forsøk kan være rettet
-                mot privatpersoner, men også bedrifter. Tradisjonelt forekommer denne svindelmetoden gjennom email, men gjennom tiden 
-                har det kommet flere typer av phishing. Les mer om dette under!
-            </p>
-        </div>
-        <div class="main-content">
-            <h1>Phishing - Email</h1>
-            <p>Trusselaktører benytter vanligvis email som medium for sine svindelforsøk. Her er det typisk å utgi seg å være en bank,
-                leveringsfirma, styremakt, også videre, som har uferdiggjort handlinger hos mottaker som hastes med å få gjort. Dette 
-                kan fort føre til at mottaker glemmer å være kritisk til avsenderen, og blindt følger instruksene på emailen. Ofte ligger
-                det en link i mailen hvor én logger inn, og dermed ender opp å gi fra seg passordet sitt. Denne metoden er den mest vanlige,
-                og mange har lært om eksistensen til denne metoden. Derfor har phishing utviklet seg, og nye former har dannet. 
-            </p>
-        </div>
-        <div class="main-content">
-            <h1>Smishing - Phishing gjennom sms</h1>
-            <p>Likt som phishing, har smishing hensikt om å få mottakere til å dele sensitiv informasjon. Hovedforskjellen her er at smishing
-                bruker sms, og/eller andre meldingstjenster, som medium til å spre svindelen. Det er svært typisk smishing å sende mottakere
-                en link/nettside de må innom, for å fikse feil som haster (selvfølgelig er disse feilene oppdiktet). Et alternativ er at
-                avsenderne ber deg om å ringe et nummer, som kobler deg til en "legitim kundestøtte". Her kan du få ondsinnet-instruksjoner,
-                som vil igjen ende opp med at persondata blir lekket.
-            </p>
-        </div>
-        <div class="main-content">
-            <h1>Vishing - Voice phishing</h1>
-            <p>Bruker trusselaktører vishing som svindelmetode, benytter de telefoni/tale som medium for sine
-                ondsinnet intensjoner. Prinsippet for alle andre metoder gjelder her også: Stjele informasjonen
-                din. En enkel variant, ved vishing, er at angriperen ringer fra skjult nummer og utgir seg for
-                å være noen andre. En mer ondskapsfull og avansert form for vishing er ved hjelp av deepfake-audio. 
-                Her kan svindlere (muligens) etterligne stemmen til noen du stoler på (foreldre, kjæreste, også videre), og deretter dra fordel av tilliten din. 
-            </p>
-        </div>
-        <div class="main-content">
-            <h1>Quishing - QR-kode-phishing</h1>
-            <p>Skanner du QR-kode uten å tenke deg over hvem som står bak? Nå kan nettopp disse kodene være svindelforsøk og ondsinnet.
-                Quishing er en relativ ny variant, og det er derfor få som er kritisk til QR-koder. I dagens samfunn kan vi finne QR-koder 
-                overalt: Ved bordet på restauranten, innlogging for WiFi, opplåsing av leie-sparkesykler, også videre. QR-koder tar oss
-                til nettsider vi ikke alltid vet hvem som står bak. Nesten hvem som helst kan lage QR-koder, i tillegg til å velge hvilke nettsider
-                de skal føre oss til. Det skal ikke mye til for at trusselaktører benytter dette for å føre oss til nettsider som stjeler
-                sensitiv data. Sjekk alltid hvilken nettside du ender opp på etter å ha skannet en QR-kode. 
-            </p>
-        </div>
-        <div class="main-content">
-            <h1>Huskeregler for å beskytte deg mot phishing</h1>
-            <h3>Du har aldri for dårlig tid til å sjekke</h3>
-            <p>Svindlere vil ofte true alvorlige konsekvenser og dårlig tid. Husk at selv om det kommer falske inkassovarsel og arrestordre på deg, har du aldri så dårlig tid at du ikke kan sjekke før du klikker.</p><br>
+      <div id="qr-container">
+        <img src="Bilder/qr.png" alt="QR Code" />
+      </div>
+      <div class="main-content">
+        <h1>Phishing - hva er det?</h1>
+        <p>
+          Phishing er en kjent svindelmetode som kommer i forskjellige
+          varianter. Denne svindelmetoden er sterkt knyttet til sosial
+          manipulering, med hensikt å få noen til å dele sensitiv informasjon.
+          Trusselaktører utgir seg for å være en troverdig og legitim kilde,
+          slik at én deler sensitiv informasjon som i prinsippet skal holdes
+          privat. Phishing-forsøk kan være rettet mot privatpersoner, men også
+          bedrifter. Tradisjonelt forekommer denne svindelmetoden gjennom email,
+          men gjennom tiden har det kommet flere typer av phishing. Les mer om
+          dette under!
+        </p>
+      </div>
+      <div class="main-content">
+        <h1>Phishing - Email</h1>
+        <p>
+          Trusselaktører benytter vanligvis email som medium for sine
+          svindelforsøk. Her er det typisk å utgi seg å være en bank,
+          leveringsfirma, styremakt, også videre, som har uferdiggjort
+          handlinger hos mottaker som hastes med å få gjort. Dette kan fort føre
+          til at mottaker glemmer å være kritisk til avsenderen, og blindt
+          følger instruksene på emailen. Ofte ligger det en link i mailen hvor
+          én logger inn, og dermed ender opp å gi fra seg passordet sitt. Denne
+          metoden er den mest vanlige, og mange har lært om eksistensen til
+          denne metoden. Derfor har phishing utviklet seg, og nye former har
+          dannet.
+        </p>
+      </div>
+      <div class="main-content">
+        <h1>Smishing - Phishing gjennom sms</h1>
+        <p>
+          Likt som phishing, har smishing hensikt om å få mottakere til å dele
+          sensitiv informasjon. Hovedforskjellen her er at smishing bruker sms,
+          og/eller andre meldingstjenster, som medium til å spre svindelen. Det
+          er svært typisk smishing å sende mottakere en link/nettside de må
+          innom, for å fikse feil som haster (selvfølgelig er disse feilene
+          oppdiktet). Et alternativ er at avsenderne ber deg om å ringe et
+          nummer, som kobler deg til en "legitim kundestøtte". Her kan du få
+          ondsinnet-instruksjoner, som vil igjen ende opp med at persondata blir
+          lekket.
+        </p>
+      </div>
+      <div class="main-content">
+        <h1>Vishing - Voice phishing</h1>
+        <p>
+          Bruker trusselaktører vishing som svindelmetode, benytter de
+          telefoni/tale som medium for sine ondsinnet intensjoner. Prinsippet
+          for alle andre metoder gjelder her også: Stjele informasjonen din. En
+          enkel variant, ved vishing, er at angriperen ringer fra skjult nummer
+          og utgir seg for å være noen andre. En mer ondskapsfull og avansert
+          form for vishing er ved hjelp av deepfake-audio. Her kan svindlere
+          (muligens) etterligne stemmen til noen du stoler på (foreldre,
+          kjæreste, også videre), og deretter dra fordel av tilliten din.
+        </p>
+      </div>
+      <div class="main-content">
+        <h1>Quishing - QR-kode-phishing</h1>
+        <p>
+          Skanner du QR-kode uten å tenke deg over hvem som står bak? Nå kan
+          nettopp disse kodene være svindelforsøk og ondsinnet. Quishing er en
+          relativ ny variant, og det er derfor få som er kritisk til QR-koder. I
+          dagens samfunn kan vi finne QR-koder overalt: Ved bordet på
+          restauranten, innlogging for WiFi, opplåsing av leie-sparkesykler,
+          også videre. QR-koder tar oss til nettsider vi ikke alltid vet hvem
+          som står bak. Nesten hvem som helst kan lage QR-koder, i tillegg til å
+          velge hvilke nettsider de skal føre oss til. Det skal ikke mye til for
+          at trusselaktører benytter dette for å føre oss til nettsider som
+          stjeler sensitiv data. Sjekk alltid hvilken nettside du ender opp på
+          etter å ha skannet en QR-kode.
+        </p>
+      </div>
+      <div class="main-content">
+        <h1>Huskeregler for å beskytte deg mot phishing</h1>
+        <h3>Du har aldri for dårlig tid til å sjekke</h3>
+        <p>
+          Svindlere vil ofte true alvorlige konsekvenser og dårlig tid. Husk at
+          selv om det kommer falske inkassovarsel og arrestordre på deg, har du
+          aldri så dårlig tid at du ikke kan sjekke før du klikker.
+        </p>
+        <br />
 
-            <h3>Vær skeptisk til linker</h3>
-            <p>Statlige aktører i Norge som Skatteetaten, Digipost, osv. gir deg ikke en link til siden deres på mail eller SMS, de bare ber deg om å logge inn på siden deres for å sjekke. Dette er for å beskytte mot etterligninger. Likevel er det seriøse aktører som ofrer den sikkerheten til fordel for det praktiske, og sender lenker på mail og SMS. Om du er usikker, er det derfor lurt å gå inn på siden manuelt for å sjekke.</p><br>
+        <h3>Vær skeptisk til linker</h3>
+        <p>
+          Statlige aktører i Norge som Skatteetaten, Digipost, osv. gir deg ikke
+          en link til siden deres på mail eller SMS, de bare ber deg om å logge
+          inn på siden deres for å sjekke. Dette er for å beskytte mot
+          etterligninger. Likevel er det seriøse aktører som ofrer den
+          sikkerheten til fordel for det praktiske, og sender lenker på mail og
+          SMS. Om du er usikker, er det derfor lurt å gå inn på siden manuelt
+          for å sjekke.
+        </p>
+        <br />
 
-            <h3>Ikke skann ukjente QR-koder</h3>
-            <p>Å skanne en QR-kode er det samme som å trykke på en link. Ikke scann om du ikke vet hvem som står bak, og sjekk lenken du skanner.</p><br>
-        </div>
-        <div class="main-content">
-            <h1>Videre</h1>
-            <p>Flott at du tar deg tid til å lære om sofistikerte svindelforsøk! Videre kan du prøve nettsidens quiz? Eller vil du kanskje
-                prøve vår passordtester for å sjekke hvor sterkt et passord virkelig er? NB! Ikke skriv inn noen faktiske passord du bruker
-                på passordtesteren.
-            </p>
-        </div>
+        <h3>Ikke skann ukjente QR-koder</h3>
+        <p>
+          Å skanne en QR-kode er det samme som å trykke på en link. Ikke scann
+          om du ikke vet hvem som står bak, og sjekk lenken du skanner.
+        </p>
+        <br />
+      </div>
+      <div class="main-content">
+        <h1>Videre</h1>
+        <p>
+          Flott at du tar deg tid til å lære om sofistikerte svindelforsøk!
+          Videre kan du prøve nettsidens quiz? Eller vil du kanskje prøve vår
+          passordtester for å sjekke hvor sterkt et passord virkelig er? NB!
+          Ikke skriv inn noen faktiske passord du bruker på passordtesteren.
+        </p>
+      </div>
     </div>
-
-</body>
+    <script src="Javascript/qr.js"></script>
+  </body>
 </html>
