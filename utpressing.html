@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Utpressing – Nettvett</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .quiz button {
+        margin: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .quiz button:hover {
+        background-color: #0056b3;
+      }
+      #quiz-result {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Nettvett for Ungdom</h1>
+      <p>Lær å beskytte deg mot svindel på nett</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <a href="index.html">
+        <span class="nav-number">1</span>
+        Intro
+      </a>
+      <a href="passord.html">
+        <span class="nav-number">2</span>
+        Passord
+      </a>
+      <a href="nettsider.html">
+        <span class="nav-number">3</span>
+        Usikre nettsider
+      </a>
+      <a href="phishing.html">
+        <span class="nav-number">4</span>
+        Phishing
+      </a>
+      <a href="spoofing.html">
+        <span class="nav-number">5</span>
+        Spoofing
+      </a>
+      <a href="offentligWifi.html">
+        <span class="nav-number">6</span>
+        Offentlig WiFi
+      </a>
+      <a href="utpressing.html" class="active">
+        <span class="nav-number">7</span>
+        Utpressing
+      </a>
+      <a href="avslutning.html">
+        <span class="nav-number">8</span>
+        Avslutning
+      </a>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="main-content">
+        <h1>Hva er nettutpressing?</h1>
+        <p>
+          Nettutpressing, eller <strong>sextortion</strong>, skjer når noen truer med å dele private bilder,
+          videoer eller meldinger dersom du ikke gjør som de sier – for eksempel sender penger eller flere bilder.
+          Dette rammer ofte unge fordi mange deler personlige øyeblikk på nettet og stoler på feil personer.
+        </p>
+        <p>
+          Det er viktig å vite at du <strong>aldri har skyld</strong> hvis dette skjer. 
+          De som driver med utpressing gjør noe ulovlig, og det finnes hjelp å få.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Hva bør du gjøre hvis noen truer deg på nett?</h1>
+        <p>
+          Mange som blir utsatt for utpressing tror det beste er å gjøre som de blir bedt om.  
+          Men det kan faktisk gjøre situasjonen verre. Tenk deg at du mottar en melding der noen truer med å dele et bilde
+          hvis du ikke betaler. Hva gjør du da?
+        </p>
+
+        <!-- QUIZ -->
+        <div class="quiz">
+          <p><strong>Hva er det riktige å gjøre?</strong></p>
+          <button onclick="quizAnswer(true)">Ikke betale og kontakte politiet</button>
+          <button onclick="quizAnswer(false)">Betale for å få det til å stoppe</button>
+          <p id="quiz-result"></p>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <h1>Husk dette</h1>
+        <ul>
+          <li>Du skal aldri betale – kontakt politiet eller en voksen du stoler på.</li>
+          <li>Be om hjelp med én gang, du er ikke alene.</li>
+          <li>Ikke svar på truslene, og lagre meldingene som bevis.</li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <h1>Videre</h1>
+        <p>
+          Du har nå lært hvordan du kan håndtere og forebygge nettutpressing.
+          I neste del oppsummerer vi alt du har lært om nettvett og sikkerhet på nett.
+        </p>
+      </div>
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="offentligWifi.html" class="nav-btn">← Forrige</a>
+      <div class="page-indicator">
+        Side <strong>5</strong> av <strong>6</strong>
+      </div>
+      <a href="avslutning.html" class="nav-btn">Neste →</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
+    </div>
+
+    <!-- QUIZ SCRIPT -->
+    <script>
+      function quizAnswer(correct) {
+        const result = document.getElementById("quiz-result");
+        if (correct) {
+          result.textContent = "✅ Riktig! Du skal aldri betale – kontakt politiet eller en voksen du stoler på.";
+          result.style.color = "green";
+        } else {
+          result.textContent = "❌ Feil. Å betale gjør deg bare mer sårbar – kontakt politiet i stedet.";
+          result.style.color = "red";
+        }
+      }
+    </script>
+
+    <script src="Javascript/qr.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>1. Intro - Nettvett</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="header">
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+
+      <nav class="nav-bar">
+        <a href="index.html" class="active">
+          <span class="nav-number">1</span>
+          Intro
+        </a>
+        <a href="passord.html">
+          <span class="nav-number">2</span>
+          Passord
+        </a>
+        <a href="usikrenettsider.html">
+          <span class="nav-number">3</span>
+          Usikre nettsider
+        </a>
+        <a href="phishing.html">
+          <span class="nav-number">4</span>
+          Phishing
+        </a>
+        <a href="utpressing.html">
+          <span class="nav-number">5</span>
+          Utpressing
+        </a>
+        <a href="avslutning.html">
+          <span class="nav-number">6</span>
+          Avslutning
+        </a>
+      </nav>
+
+      <div class="main">
+        <div class="main-content">
+            <h1>📊 Anslått total svindel av nordmenn siden 1. januar i år:</h1>
+            <div id="money">0,00 kr</div>
+        </div>
+
+        <div class="main-content">
+            <h2>Sjekk det nummeret!</h2>
+            <p>Nummeret over er nesten hake-slepende, men dessverre ikke oppdiktet! I en analyse utført av Økokrim, har de anslått at svindlere satt igjen med et utbytte på 2,13 milliarder kroner i 2024. Dette er en drastisk oppgang i forhold til 2020, hvor nummeret var 864 millioner kroner. Én kan lure på hva nummeret blir på slutten av i år.</p>
+        </div>
+
+        <div class="main-content">
+            <h2>Lær om nettvett på denne nettsiden!</h2>
+            <p>På denne nettsiden kan du lese og lære mer om nettvett. Nettsiden går gjennom forskjellige svindel-metoder, samt har interaktive elementer som tester om kunnskapen sitter! Gjennomveis vil du se anbefalinger til hva neste lese-modul kan være, men det er kun anbefalinger og ikke absolutte krav! Kos deg videre med nettsiden, og vi håper du lærer noe nytt!</p>
+        </div>
+
+        <div class="main-content">
+            <h2>Hvorfor bry seg om dette?</h2>
+            <p>Første spørsmål én kanskje tenker seg selv er "Hvorfor skal jeg bry meg om dette?". Vi lever i en teknologisk verden, hvor teknologien er stadig under utvikling. Svindel-metoder, hackere, og ondsinnet kode blir mer og mer sofistikert for dagene som går. For å kunne verne seg selv mot potensiell fare i den digitale verden, må én holde seg oppdatert på de nyeste metodene til svindlere.</p>
+            <p>Dagens ungdom ser kanskje bort fra denne faren, med forsvaret om at de føler seg selvsikre på sine egne nettvett-kunnskaper. Derimot viser statistikk at unge (i aldersgruppen 18-29 år) er den mest utsatte gruppen på nett når det gjelder svindel. Hensikten med dette prosjektet er derfor å verne dagens ungdom mot det skumle hav av digitale trusler.</p>
+        </div>
+
+        <div class="main-content">
+            <h2>Ta lærdom ut av numrene:</h2>
+            <p>Numrene over er ikke til å skremme med, men heller til å benyttes som en læringsmulighet. Disse enorme summene gir oss i samfunnet innblikk på situasjonens alvor. Vi håper tallene hjelper med å annerkjenne de digitale farene, og gir motivasjon til å holde seg oppdatert på nettvett.</p>
+        </div>
+      </div>
+
+      <div class="bottom-nav">
+        <a href="#" class="nav-btn disabled">
+          ← Forrige
+        </a>
+        <div class="page-indicator">
+          Side <strong>1</strong> av <strong>6</strong>
+        </div>
+        <a href="passord.html" class="nav-btn">
+          Neste →
+        </a>
+      </div>
+
+      <div class="footer">
+        <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
+      </div>
+
+      <script>
+        // === KONFIGURASJON ===
+        const YEARLY_INCOME = 2_130_000_000;
+        const SECONDS_PER_YEAR = 31_556_952;
+        const START_DATE = new Date("2025-01-01T00:00:00Z");
+        const KR_PER_SECOND = YEARLY_INCOME / SECONDS_PER_YEAR;
+
+        function formatNumber(num) {
+          return num.toLocaleString("no-NO", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          });
+        }
+
+        function updateMoney() {
+          const now = new Date();
+          const secondsElapsed = (now - START_DATE) / 1000;
+          const money = secondsElapsed * KR_PER_SECOND;
+          document.getElementById("money").textContent = formatNumber(money) + " kr";
+        }
+
+        updateMoney();
+        setInterval(updateMoney, 333);
+      </script>
+  </body>
+</html>
