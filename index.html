@@ -23,6 +23,25 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
     </style>
+
+      <style>
+        #money {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #007700;
+        }
+        @media (max-width:480px){
+            h1 {
+              font-size: 2rem;
+              margin-bottom: 1rem;
+            }
+            #money {
+              font-size: 2rem;
+              font-weight: bold;
+              color: #007700;
+            }
+        }
+      </style>
   </head>
 
   <body>
@@ -100,67 +119,49 @@
               formatNumber(money) + " kr";
           }
 
-          updateMoney(); // første oppdatering
-          setInterval(updateMoney, 333); // 3 ganger per sekund (1000 ms / 3 ≈ 333 ms)
-        </script>
-      </div>
-      <div class="main-content">
-        <h1>Sjekk det nummeret!</h1>
-        <p>
-          Nummeret over er nesten hake-slepende, men dessverrre ikke oppdiktet!
-          I en analyse utført av Økokrim, har de anslått at svindlere satt igjen
-          med et utbytte på 2,13 milliarder kroner i 2024. Dette er en drastisk
-          oppgang i forhold til 2020, hvor nummeret var 864 millioner kroner. Én
-          kan lure på hva nummeret blir på slutten av i år.
-        </p>
-      </div>
-      <div class="main-content">
-        <h1>Lær om nettvett på denne nettsiden!</h1>
-        <p>
-          På denne nettsiden kan du lese og lære mer om nettvett. Nettsiden går
-          gjennom forskjellig svindel-metoder, samt har interaktive elementer
-          som tester om kunnskapen sitter! Gjennomveis vil du se anbefalinger
-          til hva neste lese-modul kan være, men det er kun anbefalinger og ikke
-          absolutte krav! Kos deg videre med nettsiden, og vi håper du lærer noe
-          nytt!
-        </p>
-      </div>
-      <div class="main-content">
-        <h1>Hvorfor bry seg om dette?</h1>
-        <p>
-          Første spørsmål én kanskje tenker seg selv er "Hvorfor skal jeg bry
-          meg om dette?". Vi lever i en teknologisk verden, hvor teknologien er
-          stadig under utvikling. Svindel-metoder, hackere, og ondsinnet kode
-          blir mer og mer sofistikert for dagene som går. For å kunne verne seg
-          selv mot potensiell fare i den digitale verden, må én holde seg
-          oppdatert på de nyeste metodene til svindlere. Dagens ungdom ser
-          kanskje bort fra denne faren, med forsvaret om at de føler seg
-          selvsikre på sine egne nettvett-kunnskaper. Derimot viser statistikk
-          at unge (i aldersgruppen 18-29 år) er den mest utsatte gruppen på nett
-          når det gjelder svindel. Hensikten med dette prosjektet er derfor å
-          verne dagens ungdoms mot det skumle hav av digitale trusler.
-        </p>
-      </div>
-      <div class="main-content">
-        <h1>Ta lærdom ut av numrene:</h1>
-        <p>
-          Numrene over er ikke til å skremme med, men heller til å benyttes som
-          en læringsmulighet. Disse enorme summene gir oss i samfunnet innblikk
-          på situasjonens alvor. Vi håper tallene hjelper med å annerkjenne de
-          digitale farene, og gir motivasjon til å holde seg oppdatert på
-          nettvett.
-        </p>
-      </div>
-      <div class="main-content">
-        <h1>Videre:</h1>
-        <p>
-          Aller først: Gratulerer med første, fullførte lese-modul. Vi håper du
-          har lært noe nytt, og er ivrig på å lære deg mer! Du kan navigere
-          fritt gjennom nettsiden, og ta alt i tempoet du selv ønsker. Vil du
-          lese mer, men er usikker på hva? Kan vi foreslå (mulig) ny kunnskap om
-          phishing?
-        </p>
-      </div>
+    updateMoney(); // første oppdatering
+    setInterval(updateMoney, 333); // 3 ganger per sekund (1000 ms / 3 ≈ 333 ms)
+  </script>
+        <p id="disclaimer">*Tallet er beregnet utifra tall fra 2024</p>
+        </div>
+        <div class="main-content">
+            <h1>Sjekk det nummeret!</h1>
+            <p>Nummeret over er nesten hake-slepende, men dessverrre ikke oppdiktet! I en analyse utført av Økokrim, har de anslått
+                at svindlere satt igjen med et utbytte på 2,13 milliarder kroner i 2024. Dette er en drastisk oppgang i forhold til
+                2020, hvor nummeret var 864 millioner kroner. Én kan lure på hva nummeret blir på slutten av i år.
+            </p>
+        </div>
+        <div class="main-content">
+            <h1>Lær om nettvett på denne nettsiden!</h1>
+            <p>På denne nettsiden kan du lese og lære mer om nettvett. Nettsiden går gjennom forskjellig svindel-metoder, 
+                samt har interaktive elementer som tester om kunnskapen sitter! Gjennomveis vil du se anbefalinger til hva 
+                neste lese-modul kan være, men det er kun anbefalinger og ikke absolutte krav! Kos deg videre med nettsiden,
+                og vi håper du lærer noe nytt!</p>
+        </div>
+        <div class="main-content">
+            <h1>Hvorfor bry seg om dette?</h1>
+            <p>Første spørsmål én kanskje tenker seg selv er "Hvorfor skal jeg bry meg om dette?". Vi lever i en teknologisk
+                verden, hvor teknologien er stadig under utvikling. Svindel-metoder, hackere, og ondsinnet kode blir mer og mer 
+                sofistikert for dagene som går. For å kunne verne seg selv mot potensiell fare i den digitale verden, må
+                én holde seg oppdatert på de nyeste metodene til svindlere. Dagens ungdom ser kanskje bort fra denne faren,
+                med forsvaret om at de føler seg selvsikre på sine egne nettvett-kunnskaper. Derimot viser statistikk at unge 
+                (i aldersgruppen 18-29 år) er den mest utsatte gruppen på nett når det gjelder svindel. Hensikten med dette
+                prosjektet er derfor å verne dagens ungdoms mot det skumle hav av digitale trusler.</p>
+        </div>
+        <div class="main-content">
+            <h1>Ta lærdom ut av numrene:</h1>
+            <p>Numrene over er ikke til å skremme med, men heller til å benyttes som en læringsmulighet. Disse enorme summene gir
+                oss i samfunnet innblikk på situasjonens alvor. Vi håper tallene hjelper med å annerkjenne de digitale farene, og
+                gir motivasjon til å holde seg oppdatert på nettvett.
+            </p>
+        </div>
+        <div class="main-content">
+            <h1>Videre:</h1>
+            <p>Aller først: Gratulerer med første, fullførte lese-modul. Vi håper du har lært noe nytt, og er ivrig på å lære deg
+                mer! Du kan navigere fritt gjennom nettsiden, og ta alt i tempoet du selv ønsker. Vil du lese mer, men er usikker
+                på hva? Kan vi foreslå (mulig) ny kunnskap om phishing?
+            </p>
+        </div>
     </div>
 
     <!-- BOTTOM NAV -->
