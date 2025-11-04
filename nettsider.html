@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tittel</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .quiz-question {
+        display: none;
+        margin-bottom: 1.5rem;
+      }
+
+      .quiz-question.active {
+        display: block;
+      }
+
+      .quiz-feedback {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .quiz-feedback.correct {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .quiz-feedback.incorrect {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      .quiz-button {
+        margin-top: 1rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .quiz-button:hover {
+        background-color: #0056b3;
+      }
+
+      .quiz-button:disabled {
+        background-color: #6c757d;
+        cursor: not-allowed;
+      }
+
+      .quiz-results {
+        display: none;
+        padding: 1.5rem;
+        background-color: #e7f3ff;
+        border-radius: 5px;
+        margin-top: 1rem;
+      }
+
+      .quiz-results.show {
+        display: block;
+      }
+
+      .quiz-progress {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      fieldset {
+        border: none;
+        padding: 0;
+      }
+
+      legend {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      label {
+        display: block;
+        margin: 0.5rem 0;
+        cursor: pointer;
+      }
+
+      input[type="radio"] {
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Intro på index</h1>
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="menu">
+          <a href="index.html">Hjem</a>
+          <a href="om.html">Om oss</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="nettsider.html">Sussy nettsider</a>
+        </nav>
+      </div>
+    </div>
+    <div class="main">
+      <div id="qr-container">
+        <img src="Bilder/qr.png" alt="QR Code" />
+      </div>
+      <div class="main-content">
+        <h1>Kjennetegn på usikre nettsider</h1>
+        <p>
+          Et første kjennetegn for usikre nettsider er om lenken begynner med
+          http, og ikke https. Det dette betyr er at forbindelsen din til dette
+          nettstedet ikke er kryptert, altså at all trafikk mellom deg og
+          nettstedet kan hentes ut og leses av andre. Heldigvis vil moderne
+          nettlesere gi en advarsel om dette er tilfellet, og stoppe deg før du
+          kommer til nettstedet. Innen du begynner å finne unntak til denne
+          regelen om å unngå http, er du nok kompetent nok til å ikke trenge
+          denne leksjonen.
+        </p>
+        <div style="display: flex; justify-content: center; margin-top: 20px">
+          <img src="Bilder/http.png" style="width: 500px" alt="http vs https" />
+        </div>
+      </div>
+
+      <div class="main-content">
+        <h1>"Er dette for godt til å være sant?"</h1>
+        <p>
+          Dette er et spørsmål du bør stille deg selv ofte når du surfer på
+          nettet. Finner du plutselig 85% rabatt på produktet du ønsket, og
+          kjøper på impuls? Da får du nok i beste fall en billig kopi, og i
+          verste fall kortinformasjonen din stjålet.
+        </p>
+        <div style="display: flex; justify-content: center; margin-top: 20px">
+          <img
+            src="Bilder/gooddeal.png"
+            style="width: 500px"
+            alt="for godt til å være sant"
+          />
+        </div>
+      </div>
+
+      <div class="main-content">
+        <h1>Sjekk nettadressen nøye</h1>
+        <p>
+          En av de vanligere svindlene kommer over at du bli lurt til å skrive
+          inn innloggingsinformasjonen din på en falsk side. Her er en ekstra
+          sårbar om du har lagret kortinformasjonen din på forskjellige
+          tjenester. Du tenker kanskje at det ikke er så farlig at
+          Netflix-passordet ditt lekket, men husk at betalingsinformasjonen din
+          ligger på flere brukere, så selv mindre «verdifulle» passord kan gi
+          større lekkasjer enn du tror.
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 20px;
+          "
+        >
+          <img
+            src="Bilder/fakeNetflix.png"
+            style="width: 200px"
+            alt="fake Netflix login"
+          />
+          <img
+            src="Bilder/fakeInsta.png"
+            style="width: 200px"
+            alt="fake Facebook login"
+          />
+          <img
+            src="Bilder/fakeFacebook.png"
+            style="width: 200px"
+            alt="fake Facebook login"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Føtter, nammmm</p>
+    </div>
+    <script src="Javascript/qr.js"></script>
+  </body>
+</html>

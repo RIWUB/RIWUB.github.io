@@ -1,9 +1,15 @@
-/* === RESET & BASE === */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body {
+/* Reset and base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f2f2f2;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f2f2f2;
   color: #333;
 }
 body { display: flex; flex-direction: column; }
@@ -19,15 +25,24 @@ body { display: flex; flex-direction: column; }
 .header { padding: 20px; }
 .footer { padding: 40px 20px; text-align: center; }
 
-/* === MAIN CONTENT === */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 50px;
+  text-align: left;
+}
+
+/* Main area takes remaining space */
 .main {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* ⬅️ Stack children vertically */
+  align-items: center; /* Center horizontally */
   padding: 60px 20px;
-  gap: 40px;
+  gap: 60px; /* Space between boxes */
 }
+
+/* Inner content box */
 .main-content {
   background: #fff;
   padding: 40px;
@@ -119,13 +134,18 @@ button:hover {
   transition: all 0.35s ease;
 }
 
-/* Animate icon into X */
-#menu-toggle:checked + .hamburger-label span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-#menu-toggle:checked + .hamburger-label span:nth-child(2) { opacity: 0; }
-#menu-toggle:checked + .hamburger-label span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+/* Meny som vises når hamburger er aktiv */
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #333;
+  width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 5;
 }
 
 /* Sliding menu panel below header */
@@ -144,46 +164,19 @@ button:hover {
   z-index: 30;
 }
 
-/* Sliding menu panel below header */
-/* Header needs to be the positioning context */
-.header { 
-  padding: 20px; 
-  position: relative;  
+#qr-container {
+  position: fixed;
+  z-index: 1000;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out;
 }
 
-/* Hamburger menu container */
-.hamburger-menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  z-index: 30;
-}
-
-/* Sliding menu panel below header */
-.menu {
-  position: absolute;           
-  top: 100%;                    /* right below the header */
-  left: -20px;                  /* offset header's left padding */
-  width: 100vw;                 /* full viewport width */
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;                   
-  pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 0 0 8px 8px;   
-  transition: all 0.3s ease;
-  text-align: center;
-  z-index: 20;
-  max-height: 0;                
-  overflow: hidden;
-}
-
-/* Show menu when hamburger is checked */
-#menu-toggle:checked + .hamburger-label + .menu {
-  opacity: 1;
-  pointer-events: auto;
-  max-height: 500px;            
-  padding: 20px 0;              
+#qr-container img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
