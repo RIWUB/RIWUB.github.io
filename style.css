@@ -1,226 +1,189 @@
-/* Reset and base setup */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* === RESET & BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html, body {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
+  background: #f2f2f2;
   color: #333;
 }
+body { display: flex; flex-direction: column; }
 
-/* Flexbox layout */
-body {
+/* === HEADER & FOOTER === */
+.header, .footer {
+  background: #222;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-}
-
-/* Header and footer */
-.header {
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center; /* 👈 centers content vertically */
 }
+.header { padding: 20px; }
+.footer { padding: 40px 20px; text-align: center; }
 
-
-
-.footer {
-  background-color: #222;
-  color: white;
-  padding: 50px;
-  text-align: left;
-}
-
-/* Main area takes remaining space */
+/* === MAIN CONTENT === */
 .main {
   flex: 1;
   display: flex;
-  flex-direction: column;   /* ⬅️ Stack children vertically */
-  align-items: center;      /* Center horizontally */
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px;
-  gap: 60px;                /* Space between boxes */
+  gap: 40px;
 }
-
-
-/* Inner content box */
 .main-content {
-  background-color: white;
+  background: #fff;
   padding: 40px;
-  max-width: 100vh;
+  max-width: 800px;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   text-align: left;
 }
+.main-content h1 { font-size: 2rem; margin-bottom: 20px; }
+.main-content p { font-size: 1.1rem; line-height: 1.6; }
+#tilbud, .countdown { color: #024ddf; font-weight: bold; }
 
-/* Typography */
-.main-content h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.main-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Skjuler menyens tilstandskontroll (checkbox) */
-#menu-toggle {
-  display: none;
-}
-
-/* ☰-ikonet */
-.hamburger {
-  font-size: 1.8rem;
+/* === BUTTONS === */
+button {
+  background: #024ddf;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 16px;
   cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  user-select: none;
-  z-index: 10; /* Sørger for at den ligger over menyen */
+  transition: 0.25s;
+}
+button:hover {
+  background: #0252f2;
+  border-color: #003296;
 }
 
-/* Hamburger meny ting */
-/* HAMBURGER-MENY – fungerer med <label> og <span> */
-.hamburger-menu {
-  position: relative;
-}
-
-/* Skjul checkbox */
-#menu-toggle {
-  display: none;
-}
-
-/* Hamburger-ikon (de tre strekene) */
-.hamburger-label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.hamburger-label span {
-  height: 4px;
-  background-color: white;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-/* Meny som vises når hamburger er aktiv */
-.menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #333;
-  width: 180px;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 5;
-}
-
-.menu a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.menu a:hover {
-  background-color: #444;
-}
-
-/* Vis meny når checkbox er krysset */
-#menu-toggle:checked + .hamburger-label + .menu {
-  display: flex;
-}
-/* Tittel til nedtelling */
-#tilbud {
-  color: #024ddf;
-  text-align: left;
-}
-
+/* === POPUP === */
 .popup {
-  display: none; /* Skjult pop-up, altså at den ikke er synlig før bruker blar ned */
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0,0,0,0.5);
   justify-content: center;
   align-items: center;
 }
-/* Enda mer om pop-up */
 .popup-content {
-  background: #ffffff;
+  background: #fff;
   padding: 30px;
   border-radius: 10px;
-  width: 70vw; 
-  max-width: 700px; 
-  height: auto; 
-  max-height: 90vh; 
+  max-width: 700px;
+  width: 80vw;
+  max-height: 90vh;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
   overflow-y: auto;
+  position: relative;
 }
-.popup-content img{
-  height: auto;
+.popup-content img {
   max-width: 70%;
-  max-height: 60%;
   border-radius: 4px;
-  display: block;
   margin: 0 auto;
 }
-/* Ville ha teksten venstre-orientert */
-.popup-text {
-  text-align: left
-}
-/* Til avgift av hovedpris */
-#avgift {
-  color: #5a5a5a;
-  font-size: 12px;
-  opacity: 80%;
-}
-/* Tilbuds-nedtelling */
-.countdown {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #024ddf;
-  margin: 10px 0 20px 0;
-  text-align: left;
-}
-/* Knapp som lenker videre til hvor helst ute på det verdens vide vebb */
-button {
-  background-color: #024ddf;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  color: #ffffff;
-  padding: 14px 31px;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
-}
-/* Liten effekt som viser bruker at knappen er interaktiv */
-button:hover {
-  background-color: #0252f2;
-  border: 2px solid #003296;
-}
-
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+
+/* Hamburger menu container */
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 30;
+}
+
+/* Hide checkbox */
+#menu-toggle { display: none; }
+
+/* Hamburger icon */
+.hamburger-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 35;
+}
+
+.hamburger-label span {
+  height: 3.5px;
+  background-color: #024ddf;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+/* Animate icon into X */
+#menu-toggle:checked + .hamburger-label span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+#menu-toggle:checked + .hamburger-label span:nth-child(2) { opacity: 0; }
+#menu-toggle:checked + .hamburger-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Sliding menu panel below header */
+/* Sliding menu panel below header */
+/* Header needs to be the positioning context */
+.header { 
+  padding: 20px; 
+  position: relative;  /* ADD THIS */
+}
+
+/* Hamburger menu container */
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 30;
+}
+
+/* Sliding menu panel below header */
+/* Header needs to be the positioning context */
+.header { 
+  padding: 20px; 
+  position: relative;  
+}
+
+/* Hamburger menu container */
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 30;
+}
+
+/* Sliding menu panel below header */
+.menu {
+  position: absolute;           
+  top: 100%;                    /* right below the header */
+  left: -20px;                  /* offset header's left padding */
+  width: 100vw;                 /* full viewport width */
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;                   
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0 0 8px 8px;   
+  transition: all 0.3s ease;
+  text-align: center;
+  z-index: 20;
+  max-height: 0;                
+  overflow: hidden;
+}
+
+/* Show menu when hamburger is checked */
+#menu-toggle:checked + .hamburger-label + .menu {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 500px;            
+  padding: 20px 0;              
 }
