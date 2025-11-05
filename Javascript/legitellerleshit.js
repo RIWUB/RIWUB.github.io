@@ -55,7 +55,7 @@
     function ssNext() {
       ssIndex++;
       if (ssIndex >= ssScenarios.length) {
-        ssFeedback.textContent = `🎉 Game Over! You got ${ssScore} of ${ssScenarios.length} correct.`;
+        ssFeedback.textContent = `🎉 Du fikk ${ssScore} av ${ssScenarios.length} riktig :)`;
         ssImg.style.display = "none";
         ssNextBtn.style.display = "none";
       } else {
