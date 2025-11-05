@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Intro – Nettvett</title>
+    <title>Intro</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       #money {
@@ -51,35 +51,41 @@
       <p>Lær å beskytte deg mot svindel på nett</p>
     </div>
 
-  <!-- NAVBAR --><!-- NAVBAR -->
-<header>
-  <div class="nav-container">
-    <h1 class="site-title">Nettvett for Ungdom</h1>
-
-    <!-- Hamburger ikon -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Navigasjonslenker -->
-    <nav class="nav-links" id="nav-links">
-      <a href="index.html" class="active"><span class="nav-number">1</span> Intro</a>
-      <a href="passord.html"><span class="nav-number">2</span> Passord</a>
-      <a href="nettsider.html"><span class="nav-number">3</span> Usikre nettsider</a>
-      <a href="phishing.html"><span class="nav-number">4</span> Phishing</a>
-      <a href="spoofing.html"><span class="nav-number">5</span> Spoofing</a>
-      <a href="offentligWifi.html"><span class="nav-number">6</span> Offentlig WiFi</a>
-      <a href="utpressing.html"><span class="nav-number">7</span> Utpressing</a>
-      <a href="avslutning.html"><span class="nav-number">8</span> Avslutning</a>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <a href="index.html" class="active">
+        <span class="nav-number">1</span>
+        Intro
+      </a>
+      <a href="passord.html">
+        <span class="nav-number">2</span>
+        Passord
+      </a>
+      <a href="nettsider.html">
+        <span class="nav-number">3</span>
+        Usikre nettsider
+      </a>
+      <a href="phishing.html">
+        <span class="nav-number">4</span>
+        Phishing
+      </a>
+      <a href="spoofing.html">
+        <span class="nav-number">5</span>
+        Spoofing
+      </a>
+      <a href="offentligWifi.html">
+        <span class="nav-number">6</span>
+        Offentlig WiFi
+      </a>
+      <a href="utpressing.html">
+        <span class="nav-number">7</span>
+        Utpressing
+      </a>
+      <a href="avslutning.html">
+        <span class="nav-number">8</span>
+        Avslutning
+      </a>
     </nav>
-  </div>
-</header>
-
-
-
-
 
     <!-- MAIN -->
     <div class="main">
@@ -173,24 +179,5 @@
     </div>
 
     <script src="Javascript/qr.js"></script>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('show');
-  });
-
-  // Lukker menyen når du klikker på en lenke
-  document.querySelectorAll('#nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('show');
-    });
-  });
-</script>
-
-
   </body>
 </html>
