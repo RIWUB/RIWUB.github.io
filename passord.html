@@ -9,141 +9,134 @@
   <body>
     <!-- HEADER -->
     <div class="header">
-      <h1>Nettvett for Ungdom</h1>
-      <p>Lær å beskytte deg mot svindel på nett</p>
+      <div
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer"
+      >
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+      <nav class="mobile-nav-bar" id="mobileNavbar"></nav>
     </div>
 
     <!-- NAVBAR -->
-    <nav class="nav-bar">
-      <a href="index.html">
-        <span class="nav-number">1</span>
-        Intro
-      </a>
-      <a href="passord.html" class="active">
-        <span class="nav-number">2</span>
-        Passord
-      </a>
-      <a href="nettsider.html">
-        <span class="nav-number">3</span>
-        Usikre nettsider
-      </a>
-      <a href="phishing.html">
-        <span class="nav-number">4</span>
-        Phishing
-      </a>
-      <a href="spoofing.html">
-        <span class="nav-number">5</span>
-        Spoofing
-      </a>
-      <a href="offentligWifi.html">
-        <span class="nav-number">6</span>
-        Offentlig WiFi
-      </a>
-      <a href="utpressing.html">
-        <span class="nav-number">7</span>
-        Utpressing
-      </a>
-      <a href="avslutning.html">
-        <span class="nav-number">8</span>
-        Avslutning
-      </a>
-    </nav>
+    <nav class="nav-bar" id="navbar"></nav>
+    <script src="Javascript/navbar.js"></script>
+    
 
     <!-- MAIN -->
-	  <div class="main">
+    <div class="main">
       <div id="qr-container">
         <img src="Bilder/qr.png" alt="QR Code" />
       </div>
-        <div class="main-content">
-            <h1>Hvor mange passord har du?</h1>
-            <p>
-              Moderne tjenester pleier å kreve at du lager en brukerkonto. Hva dette betyr for deg som bruker, er at du
-              sannsynligvis har mange ulike kontoer. Da er definitivt fristelsen der for å gjøre ting lettere for seg selv.
-              De vanligste passordene i bruk er fortsatt «123456», «qwerty» og «password», og å gjenbruke passord mellom
-              tjenester er vanlig praksis. Dette er veldig dårlige vaner, av grunner vi skal gå gjennom nå.<br>
-              <br>
-              Kort sagt, gjentatte passord betyr at uønsket tilgang på en bruker, blir til uønsket tilgang på flere.
-              Dette er allerede ille nok om du får passordet lekket pga. egne feil, men du gir det også til flere
-              leverandører som mulig kan bli hacket. Med dette har vi regel nummer 1 for god passordkultur.<br>
-              <br>
-                -	Ikke bruk samme passord flere steder.
-            </p>
-        </div>
-	  
-        <div class="main-content">
-            <h1>Passordhåndtering</h1>
-            <p>
-              Nå til dags har en gjerne mange forskjellige brukere, og å huske unike passord for alle kan bli for
-              mye for hvem som helst. For å hjelpe med dette, kan du bruke et passordhåndteringsprogram, som lagrer
-              passordene dine i en kryptert databank. Det er da kritisk å bruke et pålitelig program, og lage et godt
-              passord du kan huske til dette, ettersom knekking av dette kan lekke alle passordene du har lagret der. Om
-              du etter hvert får en jobb der du får ekstra kritiske passord, kan det være lurt å ikke lagre det i passordprogrammet,
-              og heller huske det på gamlemåten. Du bør da vurdere selv hvor mange passord du klarer å huske, og hvilke av
-              disse som er mest kritiske.<br>
-              <br>
-              Ved bruk av disse tjenestene, kan du også bruke tilfeldig genererte passord. Disse vil lages med tilstrekkelig lengde,
-              og være uforutsigbare. De er da ikke laget for at et menneske skal huske de, og du blir derfor avhengig av
-              passordhåndteringen. Men om du ikke husker de passordene uansett, betyr det veldig lite.
-            </p>
-        </div>
-	  
-        <div class="main-content">
-            <h1>Hvordan lage et godt passord?</h1>
-            <p>
-              Når det gjelder hvordan du lager et passord som er vanskelig å knekke, må skjønne litt hvordan datamaskinene som
-              skal knekke dem tenker. Detaljene er nok for de spesielt interesserte, men det er greit for alle å vite at
-              datamaskiner er gode på:<br>
-                <br>
-                -	Å hurtig jobbe gjennom alle mulige løsninger.<br>
-                -	Finne mønster<br>
-                -	Utføre vanlige substitusjoner<br>
-                -	Bla opp ordlister, og finne sannsynlige valg derfra<br>
-              <br>
-              Kort sagt, jobber de raskere og mer presist enn noe menneske kunne håpe på. Men de har noen svakheter en bør utnytte.<br>
-				<br>
-                -	Lange passord mangedobler antall forsøk de må prøve<br>
-                -	Menneskelige feil er vanskelig å gjenskape<br>
-            </p>
-        </div>
-	  
-        <div class="main-content">
-            <p>
-              Ta disse to passordene som eksempel:<br>
-              <br>
-              Trub4Dur!<br>
-                -	Kun 9 tegn.<br>
-                -	Ett ord som finnes i ordliste<br>
-                -	Tall satt inn med vanlige substitusjoner. <br>
-                -	Estimert tid å knekke: 1 dag.<br>
-<br>
-              laksenfestetformotvind <br>
-                -	22 tegn<br>
-                -	Bare små bokstaver<br>
-                -	Ord kan søkes opp, men setningen gir ikke mening<br>
-                -	Estimert tid å knekke: Århundre<br>
-            </p>
-        </div>
-	  
-        <div class="main-content">
-            <p>
-              Det er et par lærdommer dere bør hente fra disse eksemplene.<br>
-              <br>
-              1.	Det er ingen erstatning på å ha lengde på passordet.<br>
-<br>
-              2.	Vanlige substitusjoner som o = 0, i = 1 og a = 4 gir lite ekstra beskyttelse, ettersom disse vanlige mønstrene vil finnes
-                  i databasene til de fleste kodeknekkere.<br>
-<br>
-              3.	Algoritmer vil prøve ord og setninger som gir mening først. Derfor vil «JegLikerJordbær» være mindre sikkert enn
-                  «JordbærMegLiker», selv om de har like lengde og bruk av spesialtegn/caps. Å være grammatisk korrekt er en svakhet i passord.<br>
-              <br>
-              Riktignok vil ikke det andre passordet bli godkjent fordi det bare har små bokstaver, men det kan lett forsterkes til f.eks.<br>
-              Laksen-Fester-1-Motvind<br>
-              <br>
-              En annen fordel med disse setningene, er at en setning er mye lettere for menneskehjernen å huske enn serier av tall og tegn.
-              Kontra det å trene seg på å huske enkeltord med overdrevne substitusjoner. Om du likevel har trent deg opp til å huske de:
-              Gratulerer, du er trent opp til å bruke passord som er vanskelige å huske, men enkle å knekke.
-            </p>
-        </div>
+      <div class="main-content">
+        <h1>Hvor mange passord har du?</h1>
+        <p>
+          Moderne tjenester pleier å kreve at du lager en brukerkonto. Hva dette
+          betyr for deg som bruker, er at du sannsynligvis har mange ulike
+          kontoer. Da er definitivt fristelsen der for å gjøre ting lettere for
+          seg selv. De vanligste passordene i bruk er fortsatt «123456»,
+          «qwerty» og «password», og å gjenbruke passord mellom tjenester er
+          vanlig praksis. Dette er veldig dårlige vaner, av grunner vi skal gå
+          gjennom nå.<br />
+          <br />
+          Kort sagt, gjentatte passord betyr at uønsket tilgang på en bruker,
+          blir til uønsket tilgang på flere. Dette er allerede ille nok om du
+          får passordet lekket pga. egne feil, men du gir det også til flere
+          leverandører som mulig kan bli hacket. Med dette har vi regel nummer 1
+          for god passordkultur.<br />
+          <br />
+          - Ikke bruk samme passord flere steder.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Passordhåndtering</h1>
+        <p>
+          Nå til dags har en gjerne mange forskjellige brukere, og å huske unike
+          passord for alle kan bli for mye for hvem som helst. For å hjelpe med
+          dette, kan du bruke et passordhåndteringsprogram, som lagrer
+          passordene dine i en kryptert databank. Det er da kritisk å bruke et
+          pålitelig program, og lage et godt passord du kan huske til dette,
+          ettersom knekking av dette kan lekke alle passordene du har lagret
+          der. Om du etter hvert får en jobb der du får ekstra kritiske passord,
+          kan det være lurt å ikke lagre det i passordprogrammet, og heller
+          huske det på gamlemåten. Du bør da vurdere selv hvor mange passord du
+          klarer å huske, og hvilke av disse som er mest kritiske.<br />
+          <br />
+          Ved bruk av disse tjenestene, kan du også bruke tilfeldig genererte
+          passord. Disse vil lages med tilstrekkelig lengde, og være
+          uforutsigbare. De er da ikke laget for at et menneske skal huske de,
+          og du blir derfor avhengig av passordhåndteringen. Men om du ikke
+          husker de passordene uansett, betyr det veldig lite.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Hvordan lage et godt passord?</h1>
+        <p>
+          Når det gjelder hvordan du lager et passord som er vanskelig å knekke,
+          må skjønne litt hvordan datamaskinene som skal knekke dem tenker.
+          Detaljene er nok for de spesielt interesserte, men det er greit for
+          alle å vite at datamaskiner er gode på:<br />
+          <br />
+          - Å hurtig jobbe gjennom alle mulige løsninger.<br />
+          - Finne mønster<br />
+          - Utføre vanlige substitusjoner<br />
+          - Bla opp ordlister, og finne sannsynlige valg derfra<br />
+          <br />
+          Kort sagt, jobber de raskere og mer presist enn noe menneske kunne
+          håpe på. Men de har noen svakheter en bør utnytte.<br />
+          <br />
+          - Lange passord mangedobler antall forsøk de må prøve<br />
+          - Menneskelige feil er vanskelig å gjenskape<br />
+        </p>
+      </div>
+
+      <div class="main-content">
+        <p>
+          Ta disse to passordene som eksempel:<br />
+          <br />
+          Trub4Dur!<br />
+          - Kun 9 tegn.<br />
+          - Ett ord som finnes i ordliste<br />
+          - Tall satt inn med vanlige substitusjoner. <br />
+          - Estimert tid å knekke: 1 dag.<br />
+          <br />
+          laksenfestetformotvind <br />
+          - 22 tegn<br />
+          - Bare små bokstaver<br />
+          - Ord kan søkes opp, men setningen gir ikke mening<br />
+          - Estimert tid å knekke: Århundre<br />
+        </p>
+      </div>
+
+      <div class="main-content">
+        <p>
+          Det er et par lærdommer dere bør hente fra disse eksemplene.<br />
+          <br />
+          1. Det er ingen erstatning på å ha lengde på passordet.<br />
+          <br />
+          2. Vanlige substitusjoner som o = 0, i = 1 og a = 4 gir lite ekstra
+          beskyttelse, ettersom disse vanlige mønstrene vil finnes i databasene
+          til de fleste kodeknekkere.<br />
+          <br />
+          3. Algoritmer vil prøve ord og setninger som gir mening først. Derfor
+          vil «JegLikerJordbær» være mindre sikkert enn «JordbærMegLiker», selv
+          om de har like lengde og bruk av spesialtegn/caps. Å være grammatisk
+          korrekt er en svakhet i passord.<br />
+          <br />
+          Riktignok vil ikke det andre passordet bli godkjent fordi det bare har
+          små bokstaver, men det kan lett forsterkes til f.eks.<br />
+          Laksen-Fester-1-Motvind<br />
+          <br />
+          En annen fordel med disse setningene, er at en setning er mye lettere
+          for menneskehjernen å huske enn serier av tall og tegn. Kontra det å
+          trene seg på å huske enkeltord med overdrevne substitusjoner. Om du
+          likevel har trent deg opp til å huske de: Gratulerer, du er trent opp
+          til å bruke passord som er vanskelige å huske, men enkle å knekke.
+        </p>
+      </div>
 
       <div class="main-content">
         <p>
@@ -164,28 +157,48 @@
 
       <!-- PASSORDTEST -->
       <div class="main-content">
-        <h1 style="color:#007700;">Test av passordstyrke</h1>
+        <h1 style="color: #007700">Test av passordstyrke</h1>
         <p>
           Generer eller skriv et passord under for å få en lokal beregning av
           styrke (kjører klient-side med <code>zxcvbn</code>).
         </p>
 
-        <div style="display:flex; gap:10px; margin-bottom:10px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 10px">
           <input
             id="pwd"
             type="password"
             placeholder="Skriv passord her"
-            style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;"
+            style="
+              width: 100%;
+              padding: 10px;
+              border-radius: 8px;
+              border: 1px solid #ccc;
+              font-size: 16px;
+            "
           />
           <button
             id="toggle"
-            style="padding:10px 12px; border-radius:8px; background:#007700; color:white; border:none; cursor:pointer;"
+            style="
+              padding: 10px 12px;
+              border-radius: 8px;
+              background: #007700;
+              color: white;
+              border: none;
+              cursor: pointer;
+            "
           >
             Vis
           </button>
           <button
             id="gen"
-            style="padding:10px 12px; border-radius:8px; background:#007700; color:white; border:none; cursor:pointer;"
+            style="
+              padding: 10px 12px;
+              border-radius: 8px;
+              background: #007700;
+              color: white;
+              border: none;
+              cursor: pointer;
+            "
           >
             Generer
           </button>
@@ -193,70 +206,105 @@
 
         <div
           class="meter"
-          style="height:14px; border-radius:8px; background:#ddd; overflow:hidden; margin-bottom:8px;"
+          style="
+            height: 14px;
+            border-radius: 8px;
+            background: #ddd;
+            overflow: hidden;
+            margin-bottom: 8px;
+          "
         >
           <i
             id="bar"
-            style="display:block; height:100%; width:0%; background:#007700; transition:width 0.3s ease;"
+            style="
+              display: block;
+              height: 100%;
+              width: 0%;
+              background: #007700;
+              transition: width 0.3s ease;
+            "
           ></i>
         </div>
 
         <div
-          style="display:flex; justify-content:space-between; margin-bottom:10px;"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+          "
         >
           <div>Score: <strong id="score">—</strong></div>
-          <div>
-            Anslått tid for å knekke: <strong id="crack">—</strong>
-          </div>
+          <div>Anslått tid for å knekke: <strong id="crack">—</strong></div>
         </div>
 
         <div
-          style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;"
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+          "
         >
           <div
-            style="padding:12px; border-radius:10px; background:#fff; border:1px solid #ccc;"
+            style="
+              padding: 12px;
+              border-radius: 10px;
+              background: #fff;
+              border: 1px solid #ccc;
+            "
           >
-            <div style="font-weight:600; color:#007700; margin-bottom:4px;">
+            <div style="font-weight: 600; color: #007700; margin-bottom: 4px">
               Feedback
             </div>
-            <div id="feedback" style="color:#555;">Skriv inn et passord.</div>
+            <div id="feedback" style="color: #555">Skriv inn et passord.</div>
           </div>
 
           <div
-            style="padding:12px; border-radius:10px; background:#fff; border:1px solid #ccc;"
+            style="
+              padding: 12px;
+              border-radius: 10px;
+              background: #fff;
+              border: 1px solid #ccc;
+            "
           >
-            <div style="font-weight:600; color:#007700; margin-bottom:4px;">
+            <div style="font-weight: 600; color: #007700; margin-bottom: 4px">
               Detaljer
             </div>
-            <div id="details" style="color:#555;">Ingen data</div>
+            <div id="details" style="color: #555">Ingen data</div>
           </div>
         </div>
 
-        <p style="font-size:13px; color:#555;">
+        <p style="font-size: 13px; color: #555">
           Dette verktøyet bruker <code>zxcvbn</code> og utfører ALLE beregninger
           i nettleseren — passord sendes ikke til eksterne servere.
         </p>
       </div>
 
       <div class="main-content">
-            <h1>Verdens raskeste passordknekker</h1>
-            <p>
-              Denne siste delen er mer for skremsel enn realistisk scenario.<br>
-              Rekorden for passordknekking ligger på over 100.000.000.000 passord gjettet i sekundet. La oss for moro skyld se på hvor
-              mye dette er. La oss anta:<br>
-	<br>
-              - Maskinen bruker ingen algoritme eller ordbøker til å finne sannsynlige passord, bare ren «brute-forcing».<br>
-              - Med store og små bokstaver, tall og spesialtegn, har du ca. 92 forskjellige symbol du kan bruke.<br>
-<br>
-              Om du lager et passord av lengde x, vil det ta denne maskinen 92^x / 10^11 sekunder før denne maskinen har prøvd alle mulige passord av denne lengden. For de som ikke vil gjøre matten selv, betyr dette at:<br>
-	<br>
-              Den har prøvd alle passord på 8 symbol på under 15 timer.<br>
-	            Den har prøvd alle passord på 9 symbol på under 55 dager.<br>
-	            Den har prøvd alle passord på 10 symbol på litt under 14 år.<br>
-	            Den trenger over 1200 år på å prøve alle passord på 11 symboler.<br>
-<br>
-              Tenker du fortsatt at passordet ditt på 8 symboler er nok?<br>
-            </p>
+        <h1>Verdens raskeste passordknekker</h1>
+        <p>
+          Denne siste delen er mer for skremsel enn realistisk scenario.<br />
+          Rekorden for passordknekking ligger på over 100.000.000.000 passord
+          gjettet i sekundet. La oss for moro skyld se på hvor mye dette er. La
+          oss anta:<br />
+          <br />
+          - Maskinen bruker ingen algoritme eller ordbøker til å finne
+          sannsynlige passord, bare ren «brute-forcing».<br />
+          - Med store og små bokstaver, tall og spesialtegn, har du ca. 92
+          forskjellige symbol du kan bruke.<br />
+          <br />
+          Om du lager et passord av lengde x, vil det ta denne maskinen 92^x /
+          10^11 sekunder før denne maskinen har prøvd alle mulige passord av
+          denne lengden. For de som ikke vil gjøre matten selv, betyr dette
+          at:<br />
+          <br />
+          Den har prøvd alle passord på 8 symbol på under 15 timer.<br />
+          Den har prøvd alle passord på 9 symbol på under 55 dager.<br />
+          Den har prøvd alle passord på 10 symbol på litt under 14 år.<br />
+          Den trenger over 1200 år på å prøve alle passord på 11 symboler.<br />
+          <br />
+          Tenker du fortsatt at passordet ditt på 8 symboler er nok?<br />
+        </p>
       </div>
     </div>
 
@@ -322,7 +370,8 @@
         scoreEl.textContent = `${s} / 4`;
         const pct = (s / 4) * 100;
         bar.style.width = pct + "%";
-        bar.style.background = s <= 1 ? "#ef4444" : s === 2 ? "#f59e0b" : "#007700";
+        bar.style.background =
+          s <= 1 ? "#ef4444" : s === 2 ? "#f59e0b" : "#007700";
         const t =
           r.crack_times_seconds.offline_slow_hashing_1e4_per_second || 0;
         crackEl.textContent = humanCrackTimeDisplay(t);
