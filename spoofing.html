@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spoofing – Nettvett</title>
+    <title>5. Spoofing – Nettvett</title>
     <link rel="stylesheet" href="style.css" />
 
     <style>
@@ -106,13 +106,27 @@
           lukrativt.
         </p>
       </div>
+    <div class="main-content">
+        <h1>Quiz</h1>
+        <p>
+          Hva er forskjellen mellom phishing og spoofing?
+        </p>  
+
+        <!-- QUIZ -->
+        <div class="quiz">
+          <button onclick="quizAnswer(false)">A) Phishing er forfalskning av IP-adresser, spoofing er forfalskning av e-post</button>
+          <button onclick="quizAnswer(true)">B) Spoofing er generelt forfalskning av identitet og brukes ofte som en del av phishing</button>
+          <button onclick="quizAnswer(false)">C) De betyr det samme</button>
+          <p id="quiz-result"></p>
+        </div>
+      </div>
     </div>
 
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
       <a href="nettsider.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>4</strong> av <strong>6</strong>
+        Side <strong>5</strong> av <strong>8</strong>
       </div>
       <a href="offentligWifi.html" class="nav-btn">Neste →</a>
     </div>
@@ -122,5 +136,16 @@
       <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
     </div>
     <script src="Javascript/qr.js"></script>
+        <!-- QUIZ SCRIPT -->
+    <script>
+      function quizAnswer(correct) {
+        const result = document.getElementById("quiz-result");
+        if (correct) {
+          result.textContent = "✅ Riktig!";
+        } else {
+          result.textContent = "❌ Feil.";
+        }
+      }
+    </script>
   </body>
 </html>

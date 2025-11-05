@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Offentlig WiFi – Nettvett</title>
+    <title>6. Offentlig WiFi – Nettvett</title>
     <link rel="stylesheet" href="style.css" />
 
     <style>
@@ -115,13 +115,27 @@
           tilgjengelig.
         </p>
       </div>
-    </div>
 
+    <div class="main-content">
+        <h1>Quiz</h1>
+        <p>
+          Offentlig Wi-Fi kan ikke spoofes.
+        </p>
+
+        <!-- QUIZ -->
+        <div class="quiz">
+          <p><strong>Fleip eller Fakta?</strong></p>
+          <button onclick="quizAnswer(true)">Fleip</button>
+          <button onclick="quizAnswer(false)">Fakta</button>
+          <p id="quiz-result"></p>
+        </div>
+      </div>
+      </div>
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
       <a href="spoofing.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>5</strong> av <strong>6</strong>
+        Side <strong>6</strong> av <strong>8</strong>
       </div>
       <a href="utpressing.html" class="nav-btn">Neste →</a>
     </div>
@@ -131,5 +145,17 @@
       <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
     </div>
     <script src="Javascript/qr.js"></script>
+        <!-- QUIZ SCRIPT -->
+    <script>
+      function quizAnswer(correct) {
+        const result = document.getElementById("quiz-result");
+        if (correct) {
+          result.textContent = "✅ Riktig! Fiendlige aktører kan på mange måter sette opp falske Wi-Fi-nettverk.";
+          result.style.color = "green";
+        } else {
+          result.textContent = "❌ Feil. Offentlig Wi-Fi kan enkelt spoofes av fiendlige aktører.";
+        }
+      }
+    </script>
   </body>
 </html>

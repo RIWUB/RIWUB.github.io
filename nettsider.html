@@ -139,13 +139,34 @@
           </div>
         </div>
       </div>
+      <div class="main-content">
+                        <div class="secure-or-sketchy">
+                <h1>Legit eller Lé-shit?</h1>
+                <p>Er dette en ekte nettside, eller et svindelforsøk.</p>
+
+                <div class="ss-screenshot-box">
+                    <img id="ss-image" src="Bilder/elkjop.png" alt="Website Screenshot">
+                </div>
+
+                <div class="ss-buttons">
+                    <button onclick="ssChoose(true)">✅ Legit</button>
+                    <button onclick="ssChoose(false)">🚫 Lé-shit</button>
+                </div>
+
+                <p id="ss-feedback"></p>
+                <p>Score: <span id="ss-score">0</span> / <span id="ss-total">0</span></p>
+                <button id="ss-next" onclick="ssNext()" style="display:none;">Next</button>
+                <h1></h1>
+                </div>
+
+      </div>
     </div>
 
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
       <a href="passord.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>3</strong> av <strong>6</strong>
+        Side <strong>3</strong> av <strong>8</strong>
       </div>
       <a href="phishing.html" class="nav-btn">Neste →</a>
     </div>
@@ -156,5 +177,6 @@
     </div>
 
     <script src="Javascript/qr.js"></script>
+    <script src="Javascript/legitellerleshit.js"></script>
   </body>
 </html>
