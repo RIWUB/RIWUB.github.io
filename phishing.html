@@ -116,6 +116,24 @@
           dannet.
         </p>
       </div>
+              <div class="main-content">
+                      <div class="game-container">
+                    <h2>Klikk eller ikke-klikk?</h2>
+                    <p>Er denne lenken trygg å klikke på eller ikke?</p>
+
+                    <div id="link-container"></div>
+                    <br>
+
+                    <div class="controls">
+                        <button onclick="choose(true)">Klikk!</button>
+                        <button onclick="choose(false)">Ikke klikk!</button>
+                    </div>
+
+                    <p id="feedback"></p>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+        </div>
+
       <div class="main-content">
         <h1>Smishing - Phishing gjennom sms</h1>
         <p>
@@ -188,6 +206,8 @@
         </p>
         <br />
       </div>
+
+
     </div>
 
     <!-- BOTTOM NAV -->
@@ -208,5 +228,6 @@
     <script src="Javascript/qr.js"></script>
     <script src="Javascript/phished.js"></script>
     <script src="Javascript/popupScript.js"></script>
+    <script src="Javascript/klikkellerikke.js"></script>
   </body>
 </html>
