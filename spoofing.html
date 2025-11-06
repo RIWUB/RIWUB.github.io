@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spoofing – Nettvett</title>
+    <title>5. Spoofing – Nettvett</title>
     <link rel="stylesheet" href="style.css" />
 
     <style>
@@ -41,45 +41,19 @@
   <body>
     <!-- HEADER -->
     <div class="header">
-      <h1>Nettvett for Ungdom</h1>
-      <p>Lær å beskytte deg mot svindel på nett</p>
+      <div
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer"
+      >
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+      <nav class="mobile-nav-bar" id="mobileNavbar"></nav>
     </div>
 
     <!-- NAVBAR -->
-    <nav class="nav-bar">
-      <a href="index.html">
-        <span class="nav-number">1</span>
-        Intro
-      </a>
-      <a href="passord.html">
-        <span class="nav-number">2</span>
-        Passord
-      </a>
-      <a href="nettsider.html">
-        <span class="nav-number">3</span>
-        Usikre nettsider
-      </a>
-      <a href="phishing.html">
-        <span class="nav-number">4</span>
-        Phishing
-      </a>
-      <a href="spoofing.html" class="active">
-        <span class="nav-number">5</span>
-        Spoofing
-      </a>
-      <a href="offentligWifi.html">
-        <span class="nav-number">6</span>
-        Offentlig WiFi
-      </a>
-      <a href="utpressing.html">
-        <span class="nav-number">7</span>
-        Utpressing
-      </a>
-      <a href="avslutning.html">
-        <span class="nav-number">8</span>
-        Avslutning
-      </a>
-    </nav>
+    <nav class="nav-bar" id="navbar"></nav>
+    <script src="Javascript/navbar.js"></script>
 
     <!-- MAIN -->
     <div class="main">
@@ -89,31 +63,62 @@
       <div class="main-content">
         <h1>Hva er Spoofing?</h1>
         <p>
-          Spoofing er et begrep som brukes om ulike måter en kan forfalske identiteten sin på nettet. Dette kan brukes til å etterligne aktører du har tillitt til, og brukes gjerne med phishing som mål.
-          Ta for eksempel disse to e-postadressene, der den ene er ekte informasjon fra Sparebank 1.<br>
-          informasjon@info.sr-bank.no<br>
-          informasjon@info.sг-bank.no<br>
-          <br>
-          Ser du forskjellen? Om du ser nøye på «sr-bank» i den andre adressen, ser du at r-en er byttet med en bokstav fra det russiske alfabetet, så avsenderadressen kommer fra et helt annet domene. Dette er da et forsøk på å spoofe en e-postadresse.
+          Spoofing er et begrep som brukes om ulike måter en kan forfalske
+          identiteten sin på nettet. Dette kan brukes til å etterligne aktører
+          du har tillitt til, og brukes gjerne med phishing som mål. Ta for
+          eksempel disse to e-postadressene, der den ene er ekte informasjon fra
+          Sparebank 1.<br />
+          informasjon@info.sr-bank.no<br />
+          informasjon@info.sг-bank.no<br />
+          <br />
+          Ser du forskjellen? Om du ser nøye på «sr-bank» i den andre adressen,
+          ser du at r-en er byttet med en bokstav fra det russiske alfabetet, så
+          avsenderadressen kommer fra et helt annet domene. Dette er da et
+          forsøk på å spoofe en e-postadresse.
         </p>
       </div>
 
       <div class="main-content">
         <h1>Spoofing av telefonnummer</h1>
         <p>
-          Men spoofing er ikke begrenset til bare etterligning. Du er kanskje litt skeptisk til å ta telefonen om du ser et utenlandsk nummer, men du har kanskje blitt ringt av et norsk nummer, og likevel hørt en åpenbar svindel. Du har kanskje prøvd å søke opp nummeret på gule sider etterpå, og funnet et privat nummer uten noe uvanlig.
-          <br>
-          Det som sannsynligvis har skjedd da er at noen har fått telefonen sin smittet av skadevare laget for å ta kontroll på enheten. Om din telefon er smittet med et slikt program, kan svindlere i et helt annet land bruke ditt telefonnummer til å utføre svindeloppkallene sine.
+          Men spoofing er ikke begrenset til bare etterligning. Du er kanskje
+          litt skeptisk til å ta telefonen om du ser et utenlandsk nummer, men
+          du har kanskje blitt ringt av et norsk nummer, og likevel hørt en
+          åpenbar svindel. Du har kanskje prøvd å søke opp nummeret på gule
+          sider etterpå, og funnet et privat nummer uten noe uvanlig.
+          <br />
+          Det som sannsynligvis har skjedd da er at noen har fått telefonen sin
+          smittet av skadevare laget for å ta kontroll på enheten. Om din
+          telefon er smittet med et slikt program, kan svindlere i et helt annet
+          land bruke ditt telefonnummer til å utføre svindeloppkallene sine.
         </p>
       </div>
 
       <div class="main-content">
         <h1>Spoofing av nettverk</h1>
         <p>
-          En kan også etterligne enheter i et nettverk. Ta for eksempel en Wi-Fi-ruter. En har som regel tillitt til at den er trygg å bruke, men om noen setter opp en ruter for å etterligne din,
-          kan de fange opp nettverkstrafikk om du kobler deg på den. Du er sannsynligvis ikke et interessant nok mål til at noen gjør det hjemme hos deg,
-          men på hoteller, kjøpesentre eller flyplasser kan dette være langt mer lukrativt.
+          En kan også etterligne enheter i et nettverk. Ta for eksempel en
+          Wi-Fi-ruter. En har som regel tillitt til at den er trygg å bruke, men
+          om noen setter opp en ruter for å etterligne din, kan de fange opp
+          nettverkstrafikk om du kobler deg på den. Du er sannsynligvis ikke et
+          interessant nok mål til at noen gjør det hjemme hos deg, men på
+          hoteller, kjøpesentre eller flyplasser kan dette være langt mer
+          lukrativt.
         </p>
+      </div>
+    <div class="main-content">
+        <h1>Quiz</h1>
+        <p>
+          Hva er forskjellen mellom phishing og spoofing?
+        </p>  
+
+        <!-- QUIZ -->
+        <div class="quiz">
+          <button onclick="quizAnswer(false)">A) Phishing er forfalskning av IP-adresser, spoofing er forfalskning av e-post</button>
+          <button onclick="quizAnswer(true)">B) Spoofing er generelt forfalskning av identitet og brukes ofte som en del av phishing</button>
+          <button onclick="quizAnswer(false)">C) De betyr det samme</button>
+          <p id="quiz-result"></p>
+        </div>
       </div>
     </div>
 
@@ -121,7 +126,7 @@
     <div class="bottom-nav">
       <a href="nettsider.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>4</strong> av <strong>6</strong>
+        Side <strong>5</strong> av <strong>8</strong>
       </div>
       <a href="offentligWifi.html" class="nav-btn">Neste →</a>
     </div>
@@ -131,5 +136,16 @@
       <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
     </div>
     <script src="Javascript/qr.js"></script>
+        <!-- QUIZ SCRIPT -->
+    <script>
+      function quizAnswer(correct) {
+        const result = document.getElementById("quiz-result");
+        if (correct) {
+          result.textContent = "✅ Riktig!";
+        } else {
+          result.textContent = "❌ Feil.";
+        }
+      }
+    </script>
   </body>
 </html>

@@ -23,45 +23,19 @@
   <body>
     <!-- HEADER -->
     <div class="header">
-      <h1>Nettvett for Ungdom</h1>
-      <p>Lær å beskytte deg mot svindel på nett</p>
+      <div
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer"
+      >
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+      <nav class="mobile-nav-bar" id="mobileNavbar"></nav>
     </div>
 
     <!-- NAVBAR -->
-    <nav class="nav-bar">
-      <a href="index.html">
-        <span class="nav-number">1</span>
-        Intro
-      </a>
-      <a href="passord.html">
-        <span class="nav-number">2</span>
-        Passord
-      </a>
-      <a href="nettsider.html">
-        <span class="nav-number">3</span>
-        Usikre nettsider
-      </a>
-      <a href="phishing.html" class="active">
-        <span class="nav-number">4</span>
-        Phishing
-      </a>
-      <a href="spoofing.html">
-        <span class="nav-number">5</span>
-        Spoofing
-      </a>
-      <a href="offentligWifi.html">
-        <span class="nav-number">6</span>
-        Offentlig WiFi
-      </a>
-      <a href="utpressing.html">
-        <span class="nav-number">7</span>
-        Utpressing
-      </a>
-      <a href="avslutning.html">
-        <span class="nav-number">8</span>
-        Avslutning
-      </a>
-    </nav>
+    <nav class="nav-bar" id="navbar"></nav>
+    <script src="Javascript/navbar.js"></script>
 
     <!-- Egen div til pop-up. Innholdet her er usynnlig frem til en viss lengde er scrollet ned på siden -->
     <div id="scrollPopup" class="popup">
@@ -116,6 +90,24 @@
           dannet.
         </p>
       </div>
+              <div class="main-content">
+                      <div class="game-container">
+                    <h2>Klikk eller ikke-klikk?</h2>
+                    <p>Er denne lenken trygg å klikke på eller ikke?</p>
+
+                    <div id="link-container"></div>
+                    <br>
+
+                    <div class="controls">
+                        <button onclick="choose(true)">Klikk!</button>
+                        <button onclick="choose(false)">Ikke klikk!</button>
+                    </div>
+
+                    <p id="feedback"></p>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+        </div>
+
       <div class="main-content">
         <h1>Smishing - Phishing gjennom sms</h1>
         <p>
@@ -188,22 +180,15 @@
         </p>
         <br />
       </div>
-      <div class="main-content">
-        <h1>Videre</h1>
-        <p>
-          Flott at du tar deg tid til å lære om sofistikerte svindelforsøk!
-          Videre kan du prøve nettsidens quiz? Eller vil du kanskje prøve vår
-          passordtester for å sjekke hvor sterkt et passord virkelig er? NB!
-          Ikke skriv inn noen faktiske passord du bruker på passordtesteren.
-        </p>
-      </div>
+
+
     </div>
 
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
       <a href="nettsider.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>4</strong> av <strong>6</strong>
+        Side <strong>4</strong> av <strong>8</strong>
       </div>
       <a href="spoofing.html" class="nav-btn">Neste →</a>
     </div>
@@ -217,5 +202,6 @@
     <script src="Javascript/qr.js"></script>
     <script src="Javascript/phished.js"></script>
     <script src="Javascript/popupScript.js"></script>
+    <script src="Javascript/klikkellerikke.js"></script>
   </body>
 </html>
