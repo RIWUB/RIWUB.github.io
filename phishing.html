@@ -18,6 +18,9 @@
         border-radius:8px;
         box-shadow:0 4px 12px rgba(0,0,0,0.08);
       }
+      .fake-popup-button {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -40,7 +43,7 @@
     <!-- Egen div til pop-up. Innholdet her er usynnlig frem til en viss lengde er scrollet ned på siden -->
     <div id="scrollPopup" class="popup">
         <div class="popup-content">
-            <span id="closePopup" class="close-btn">&times;</span>
+            <span id="closePopup" class="close-btn-2">&times;</span>
             <h2>Få billetter til Karpe-konsert</h2>
             <img src="Bilder/karpeKonsert.jpg" alt="Karpe-konsert illustrasjon">
             <p class="popup-text">Torsdag, 2. juli 2026 opptrer Karpe på Ekebergsletta, i Oslo. Få DAGSPASS til 519,00kr per billett, dette er et enormt tilbud
@@ -52,7 +55,7 @@
             <h3 id="tilbud" class="popup-text">Tid før tilbudet løper ut:</h3>
             <div id="countdown" class="countdown">05:00</div>
             <a href="https://glasswatt.neocities.org/"> <!-- Rar nettside -->
-                <button>Ta meg til bestilling!</button>
+                <button class="fake-popup-button">Ta meg til bestilling!</button>
             </a>
         </div>
     </div>
