@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Offentlig WiFi – Nettvett</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .main-content img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .image-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .image-row img {
+        width: 200px;
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      #money {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #007700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <div
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer"
+      >
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+      <nav class="mobile-nav-bar" id="mobileNavbar"></nav>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="nav-bar" id="navbar"></nav>
+    <script src="Javascript/navbar.js"></script>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div id="qr-container">
+        <img src="Bilder/qr.png" alt="QR Code" />
+      </div>
+      <div class="main-content">
+        <h1>Praktisk, men usikkert</h1>
+        <p>
+          Offentlig Wi-Fi er en meget praktisk ting å ha tilgang til. Men dette
+          er dessverre enda et tilfelle der det som er praktisk går imot det som
+          er sikkert. Å koble seg til offentlig Wi-Fi kan åpne flere
+          angrepsvektorer, spesielt om du ikke tar riktige forhåndsregler.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Problematikk bak offentlig wifi</h1>
+        <p>
+          Problemet med offentlig Wi-Fi er hvor lett den er å spoofe. Hvem som
+          helst kan sette opp et nett med samme navn, lage en falsk
+          autentisering, og med det få tilgang til å overvåke og endre
+          nettverkstrafikken din.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Risikofritt?</h1>
+        <p>
+          Selv om du kobler deg på det ekte nettverket, er det ikke risikofritt.
+          Både Windows og Apple har praktiske alternativer for fildeling på
+          lokale nettverk, som kan ubevisst gi andre tilgang på filene dine,
+          eller la de sende infiserte filer til din enhet. Ettersom disse vil
+          enten være uten passord, eller med passordet offentlig tilgjengelig,
+          vil det være langt ifra umulig å fange opp trafikken din på dette
+          nettverket.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Forhåndsregler for offentlig wifi</h1>
+        <p>
+          Om du virkelig ønsker å bruke nettverket, finnes det forhåndsregler du
+          kan ta. Sørg for at fildeling/AirDrop er deaktivert først, og vær obs
+          på duplikater av nettverk i listen. Du bør da også bruke en VPN
+          (Virtuelt Privat Nettverk), som kan kryptere all trafikken din, og
+          gjøre den uleselig for uvedkomne. De som angriper offentlige Wi-Fi er
+          som regel bare ute etter enkle mål, og vil derfor ikke sette av
+          ressursene til å sende akkurat din data gjennom en ressurs- og
+          tidkrevende dekryptering.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h1>Til slutt</h1>
+        <p>
+          Likevel er det ikke anbefalt å bruke disse nettverkene til kritiske
+          tjenester som bank, og det er mye sikrere å bare bruke Hotspot om
+          tilgjengelig.
+        </p>
+      </div>
+
+    <div class="main-content">
+        <h1>Quiz</h1>
+        <p>
+          Offentlig Wi-Fi kan ikke spoofes.
+        </p>
+
+        <!-- QUIZ -->
+        <div class="quiz">
+          <p><strong>Fleip eller Fakta?</strong></p>
+          <button onclick="quizAnswer(true)">Fleip</button>
+          <button onclick="quizAnswer(false)">Fakta</button>
+          <p id="quiz-result"></p>
+        </div>
+      </div>
+      </div>
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="spoofing.html" class="nav-btn">← Forrige</a>
+      <div class="page-indicator">
+        Side <strong>6</strong> av <strong>8</strong>
+      </div>
+      <a href="utpressing.html" class="nav-btn">Neste →</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
+    </div>
+    <script src="Javascript/qr.js"></script>
+        <!-- QUIZ SCRIPT -->
+    <script>
+      function quizAnswer(correct) {
+        const result = document.getElementById("quiz-result");
+        if (correct) {
+          result.textContent = "✅ Riktig! Fiendlige aktører kan på mange måter sette opp falske Wi-Fi-nettverk.";
+          result.style.color = "green";
+        } else {
+          result.textContent = "❌ Feil. Offentlig Wi-Fi kan enkelt spoofes av fiendlige aktører.";
+        }
+      }
+    </script>
+  </body>
+</html>
