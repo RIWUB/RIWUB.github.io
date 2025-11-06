@@ -109,14 +109,13 @@
     <div class="main-content">
         <h1>Quiz</h1>
         <p>
-          Hva er forskjellen mellom phishing og spoofing?
+          Fleip eller fakta: Mobilnettverk kan ikke bli spoofet av angripere.
         </p>  
 
         <!-- QUIZ -->
         <div class="quiz">
-          <button onclick="quizAnswer(false)">A) Phishing er forfalskning av IP-adresser, spoofing er forfalskning av e-post</button>
-          <button onclick="quizAnswer(true)">B) Spoofing er generelt forfalskning av identitet og brukes ofte som en del av phishing</button>
-          <button onclick="quizAnswer(false)">C) De betyr det samme</button>
+          <button onclick="quizAnswer(true)">Fleip</button>
+          <button onclick="quizAnswer(false)">Fakta</button>
           <p id="quiz-result"></p>
         </div>
       </div>
@@ -126,7 +125,7 @@
     <div class="bottom-nav">
       <a href="nettsider.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>5</strong> av <strong>8</strong>
+        Side <strong>5</strong> av <strong>9</strong>
       </div>
       <a href="offentligWifi.html" class="nav-btn">Neste →</a>
     </div>
@@ -141,9 +140,9 @@
       function quizAnswer(correct) {
         const result = document.getElementById("quiz-result");
         if (correct) {
-          result.textContent = "✅ Riktig!";
+          result.textContent = '✅ Riktig! Angripere kan sette opp falske basestasjoner, men da er det ikke snakk om "hobbyhackere".';
         } else {
-          result.textContent = "❌ Feil.";
+          result.textContent = "❌ Feil. Det er vanskelige, men ikke umulig.";
         }
       }
     </script>

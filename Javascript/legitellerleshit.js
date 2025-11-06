@@ -9,7 +9,7 @@
       {
         img: "Bilder/jordans.png",
         isSecure: false,
-        explanation: "En godt spoofet nettside. Den ser ut som den er ekte, men har ikke riktig URL. ikke bli lurt!"
+        explanation: "Her claimer de å selge Jordans fra Nike Factory Store, men URL-en forteller oss at dette ikke er ekte. Prisen er også for god til å være sann. ikke bli lurt!"
       },
       {
         img: "Bilder/pay-pail.png",
@@ -19,7 +19,7 @@
       {
         img: "Bilder/NTNU.png",
         isSecure: true,
-        explanation: "En legit og offisiell NTNU side. Jeg vet ikke hvorfor den består av ren HTML?"
+        explanation: "En legit og offisiell NTNU side. Legg merke til den sikre tilkoblingen (https) og den korrekte domenenavnet (ntnu.no). Manglene CSS har ingenting å si."
       }
     ];
 
