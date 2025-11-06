@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Intro – Nettvett</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+  /* Container som holder ordene og betydningene ved siden av hverandre */
+  .match-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* slik at det fortsatt funker på mobil */
+  }
+
+  /* Ord og betydning-kolonner */
+  .words, .meanings {
+    width: 250px;
+  }
+
+  .words h3, .meanings h3 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    cursor: pointer;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+  }
+
+  /* Hover-effekt */
+  li:hover {
+    background-color: #eef;
+  }
+
+  /* Når brukeren klikker et element */
+  .selected {
+    background-color: #cce5ff;
+    border-color: #66b0ff;
+  }
+
+  /* Når match er funnet */
+  .matched {
+    background-color: #b8f5b8;
+    border-color: #3fa43f;
+    color: #222;
+    text-decoration: line-through;
+    cursor: default;
+  }
+
+  /* Tilbakemeldingstekst under */
+  #game-message {
+    font-weight: bold;
+    margin-top: 15px;
+    height: 24px;
+  }
+
+  /* Reset-knappen */
+  #reset-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #007acc;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #reset-btn:hover {
+    background-color: #005fa3;
+  }
+    /* ===== QUIZ ===== */
+
+
+  #quiz h3 {
+    margin-bottom: 15px;
+  }
+
+  #quiz label {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  #quiz input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  #quiz label:hover {
+    background-color: #eef6ff;
+    border-color: #90c3ff;
+  }
+
+  #quiz label.selected {
+    background-color: #d7e9ff;
+    border-color: #3385ff;
+  }
+
+  #next-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007acc;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  #next-btn:hover {
+    background-color: #005fa3;
+  }
+
+  #result {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+
+
+  </head>
+
+  <body>
+  <script src="Javascript/matchgame.js"></script>
+    <!-- HEADER/NAVBAR -->
+    <div class="header">
+      <div
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer"
+      >
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+
+      <nav class="mobile-nav-bar" id="mobileNavbar"></nav>
+    </div>
+
+    <nav class="nav-bar" id="navbar"></nav>
+    <script src="Javascript/navbar.js"></script>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="main-content">
+        <h1>Test deg selv!</h1>
+        <p>
+          Her kan du teste hva du har lært om nettvett i denne nettsiden. 
+        </p>
+
+      </div>                <div id="quiz-container" align="center" class="main-content">
+  <h1>Cybersikkerhet Quiz</h1>
+  <div id="quiz"></div><br>
+  <button id="next-btn" onclick="nextQuestion()">Neste spørsmål</button>
+  <p id="result"></p>
+</div>
+
+<div class="main-content">
+                <h1>Match ordene og dems betydning <br></h1>
+                <div class="match-container">
+                    <div class="words">
+                    <h3>Ord</h3>
+                    <ul id="words-list"></ul>
+                    </div>
+                    <div class="meanings">
+                    <h3>Betydning</h3>
+                    <ul id="meanings-list"></ul>
+                    </div>
+                </div>
+                <p id="game-message"></p>
+                <button id="reset-btn" style="display:none;">Play Again</button>
+                </div>
+
+</div>
+    
+
+
+
+<script>
+  const quizData = [
+    {
+      question: "Hvilke av disse passordene vil være det sterkeste?",
+      answers: [
+        "X5omp!-F53",
+        "1.Korrekt.Batteri.Stift",
+        "S!gmaS!gmaS!gmaS!gmaS!gma1",
+        "tr0NDHE!m123"
+      ],
+      correct: 1
+    },
+    {
+      question: "Hvilken av følgende påstand er sanne om farlige lenker?",
+      answers: [
+        "Jeg kan være sårbar straks jeg har trykket på linken.",
+        "Jeg er bare sårbar om jeg logger inn, eller åpner en nedlastet fil.",
+        "Jeg er bare sårbar om nettsiden klarer å laste ned en fil.",
+        "Om de har klart å sende meg lenken, er jeg allerede kompromittert."
+      ],
+      correct: 0
+    },
+    {
+      question: "Du har fått e-post om inkassovarsel for en ubetalt regning fra mobilleverandøren din. Hva bør du gjøre?",
+      answers: [
+        "Trykke på lenke i e-post for å se regningen.",
+        "Umiddelbart betale summen den ber om, for å unngå inkasso.",
+        "Gå til leverandørens side, og logg inn for å se etter ubetalte regninger.",
+        "Ignorere meldingen"
+      ],
+      correct: 2
+    },
+    {
+      question: "Du blir fortalt at telefonnummeret ditt er flagget som en potensiell svindel. Hva bør du gjøre?",
+      answers: [
+        "Haters har rapportert deg for moro skyld. Ignorer dem.",
+        "Umiddelbart bytt telefonnummer.",
+        "Du vil aldri mer være trygg. Umiddelbart brenn alle elektroniske apparat du eier, og flytt til Tibet for å leve som munk.",
+        "Nummeret ditt kan være kompromittert av svindlere. Ring telefonselskapet for å få bekreftet om det er en feil, eller krever tiltak."
+      ],
+      correct: 3
+    },
+    {
+      question: "Om du ønsker å bruke offentlig Wi-Fi, hvordan kan du i best mulig grad beskytte deg selv?",
+      answers: [
+        "Bruk et Apple-produkt. IPhone og Mac kan ikke få virus.",
+        "Bruk en VPN for å skjule IP-adressen din og kryptere data.",
+        "Så lenge det fungerer er det det ekte nettet, og dermed trygt.",
+        "Meh, du går ikke innpå noe som er verdt å spionere på uansett. Det går fint."
+      ],
+      correct: 1
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  function loadQuestion() {
+    const q = quizData[currentQuestion];
+    const quizDiv = document.getElementById("quiz");
+    const result = document.getElementById("result");
+    result.textContent = "";
+    let html = `<h3>${q.question}</h3>`;
+    q.answers.forEach((a, i) => {
+      html += `<div><label><input type="radio" name="answer" value="${i}"> ${a}</label></div>`;
+    });
+    quizDiv.innerHTML = html;
+  }
+
+  function nextQuestion() {
+    const selected = document.querySelector('input[name="answer"]:checked');
+    if (!selected) {
+      alert("Velg et svar før du fortsetter!");
+      return;
+    }
+    const answer = parseInt(selected.value);
+    if (answer === quizData[currentQuestion].correct) {
+      score++;
+    }
+
+    currentQuestion++;
+    if (currentQuestion < quizData.length) {
+      loadQuestion();
+    } else {
+      showFinalScore();
+    }
+  }
+
+  function showFinalScore() {
+    const quizDiv = document.getElementById("quiz");
+    const nextBtn = document.getElementById("next-btn");
+    const result = document.getElementById("result");
+    quizDiv.innerHTML = `<h3>Du fikk ${score} av ${quizData.length} riktige!</h3>`;
+    nextBtn.style.display = "none";
+    result.textContent = "Takk for at du tok cybersikkerhetsquizen!";
+  }
+
+  // Start quiz med første spørsmål
+  loadQuestion();
+</script>
+
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="utpressing.html" class="nav-btn">← Forrige</a>
+      <div class="page-indicator">
+        Side <strong>8</strong> av <strong>9</strong>
+      </div>
+      <a href="avslutning.html" class="nav-btn">Neste →</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© 2025 Nettvett for Ungdom | Lær å være trygg på nett</p>
+    </div>
+  </body>
+</html>

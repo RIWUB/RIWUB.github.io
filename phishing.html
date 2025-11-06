@@ -18,67 +18,44 @@
         border-radius:8px;
         box-shadow:0 4px 12px rgba(0,0,0,0.08);
       }
+      .fake-popup-button {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <!-- HEADER -->
     <div class="header">
-      <h1>Nettvett for Ungdom</h1>
-      <p>Lær å beskytte deg mot svindel på nett</p>
+      <div
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer"
+      >
+        <h1>Nettvett for Ungdom</h1>
+        <p>Lær å beskytte deg mot svindel på nett</p>
+      </div>
+      <nav class="mobile-nav-bar" id="mobileNavbar"></nav>
     </div>
 
     <!-- NAVBAR -->
-    <nav class="nav-bar">
-      <a href="index.html">
-        <span class="nav-number">1</span>
-        Intro
-      </a>
-      <a href="passord.html">
-        <span class="nav-number">2</span>
-        Passord
-      </a>
-      <a href="nettsider.html">
-        <span class="nav-number">3</span>
-        Usikre nettsider
-      </a>
-      <a href="phishing.html" class="active">
-        <span class="nav-number">4</span>
-        Phishing
-      </a>
-      <a href="spoofing.html">
-        <span class="nav-number">5</span>
-        spoofing
-      </a>
-      <a href="offentligWifi.html">
-        <span class="nav-number">6</span>
-        spoofing
-      </a>
-      <a href="utpressing.html">
-        <span class="nav-number">7</span>
-        Utpressing
-      </a>
-      <a href="avslutning.html">
-        <span class="nav-number">8</span>
-        Avslutning
-      </a>
-    </nav>
+    <nav class="nav-bar" id="navbar"></nav>
+    <script src="Javascript/navbar.js"></script>
 
     <!-- Egen div til pop-up. Innholdet her er usynnlig frem til en viss lengde er scrollet ned på siden -->
     <div id="scrollPopup" class="popup">
         <div class="popup-content">
-            <span id="closePopup" class="close-btn">&times;</span>
+            <span id="closePopup" class="close-btn-2">&times;</span>
             <h2>Få billetter til Karpe-konsert</h2>
-            <img src="Bilder/karpeKonsert.jpg" alt="Karpe-konsert illustrasjon">
-            <p class="popup-text">Torsdag, 2. juli 2026 opptrer Karpe på Ekebergsletta, i Oslo. Få DAGSPASS til 519,00kr per billett, dette er et enormt tilbud
+            <img src="Bilder/karpeKonsert.jpg" alt="Karpe-konsert illustrasjon" style="margin-top:20px">
+            <p class="popup-text" style="margin-top:20px">Torsdag, 2. juli 2026 opptrer Karpe på Ekebergsletta, i Oslo. Få DAGSPASS til 519,00kr per billett, dette er et enormt tilbud
                 i forhold til Ticketmaster sin pris på 1299,00kr per billett! Tilbudet her er begrenset grunnet stor etterspørsel, sørg å skaff deg
                 en billett før tilbudet utløper.
             </p>
-            <p id="avgift" class="popup-text">Pris inkluderer 64,00 kr–84,00 kr avgift</p>
+            <p id="avgift" class="popup-text" style="margin-top:20px">Pris inkluderer 64,00 kr–84,00 kr avgift</p>
             <br>
             <h3 id="tilbud" class="popup-text">Tid før tilbudet løper ut:</h3>
             <div id="countdown" class="countdown">05:00</div>
             <a href="https://glasswatt.neocities.org/"> <!-- Rar nettside -->
-                <button>Ta meg til bestilling!</button>
+                <button class="fake-popup-button">Ta meg til bestilling!</button>
             </a>
         </div>
     </div>
@@ -116,6 +93,24 @@
           dannet.
         </p>
       </div>
+              <div class="main-content">
+                      <div class="game-container">
+                    <h2>Klikk eller ikke-klikk?</h2>
+                    <p>Er denne lenken trygg å klikke på eller ikke?</p>
+
+                    <div id="link-container"></div>
+                    <br>
+
+                    <div class="controls">
+                        <button onclick="choose(true)">Klikk!</button>
+                        <button onclick="choose(false)">Ikke klikk!</button>
+                    </div>
+
+                    <p id="feedback"></p>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+        </div>
+
       <div class="main-content">
         <h1>Smishing - Phishing gjennom sms</h1>
         <p>
@@ -188,13 +183,15 @@
         </p>
         <br />
       </div>
+
+
     </div>
 
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
       <a href="nettsider.html" class="nav-btn">← Forrige</a>
       <div class="page-indicator">
-        Side <strong>4</strong> av <strong>6</strong>
+        Side <strong>4</strong> av <strong>9</strong>
       </div>
       <a href="spoofing.html" class="nav-btn">Neste →</a>
     </div>
@@ -208,5 +205,6 @@
     <script src="Javascript/qr.js"></script>
     <script src="Javascript/phished.js"></script>
     <script src="Javascript/popupScript.js"></script>
+    <script src="Javascript/klikkellerikke.js"></script>
   </body>
 </html>
