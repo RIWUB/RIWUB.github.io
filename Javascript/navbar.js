@@ -27,8 +27,12 @@ const navbarHTML = `
         <span class='nav-number'>7</span>
         Utpressing
       </a>
-      <a href='avslutning.html' id='nav-avslutning'>
+      <a href='quiz.html' id='nav-quiz'>
         <span class='nav-number'>8</span>
+        Quiz
+      </a>
+      <a href='avslutning.html' id='nav-avslutning'>
+        <span class='nav-number'>9</span>
         Avslutning
       </a>`;
 
@@ -42,6 +46,7 @@ const urlToNavId = {
   "/spoofing.html": "nav-spoofing",
   "/offentligWifi.html": "nav-offentligWifi",
   "/utpressing.html": "nav-utpressing",
+  "/quiz.html": "nav-quiz",
   "/avslutning.html": "nav-avslutning",
 };
 
