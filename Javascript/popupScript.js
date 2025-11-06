@@ -1,5 +1,5 @@
 const popup = document.getElementById("scrollPopup");
-const closeBtn = document.getElementById("closePopup");
+const closeBtn2 = document.getElementById("closePopup");
 
 let popupShown = false; // Sjekker om pop-up'en har blitt vist. Pop-up'en skal altså ikke vises to ganger
 
@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
   }
 });
 // Lukkeknapp til pop-up'en
-closeBtn.addEventListener("click", () => {
+closeBtn2.addEventListener("click", () => {
     // Vis pop-up'en
     popup.style.display = "none";
     document.body.style.overflow = "auto";
