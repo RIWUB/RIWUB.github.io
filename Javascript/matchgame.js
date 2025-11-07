@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const pairs = [
-    { word: "Phishing", meaning: "Svindelforsøk som utnytter spoofing til å forfalske identiteten til svindleren." },
-    { word: "Brannmur", meaning: "nettverk sikkerhet system som blokkerer trussler" },
-    { word: "Malware", meaning: "Ondartet kode som er designet for å skade maskiner" },
-    { word: "VPN", meaning: "Gjør internet tilkoblingen sikker ved å kryptere trafikken" },
-    { word: "To-Faktor autentisering", meaning: "Extra login steg for å verifisere identiteten din" },
+    { word: "Phishing", meaning: "Svindelforsøk der offeret blir kontaktet, og forsøkt lurt til å gi fra seg sensitiv informasjon eller laste ned skadevare." },
+    { word: "Brannmur", meaning: "System for nettverksikkerhet som blokkerer ikke-autorisert trafikk." },
+    { word: "Malware", meaning: "Samlebegrep for all ondartet kode, som virus, spionasjeprogram o.l." },
+    { word: "VPN", meaning: "Privat tilkobling som skuler IP-adressen din og beskytter trafikken med kryptering." },
+    { word: "To-Faktor autentisering", meaning: "Extra login steg for å verifisere identiteten din." },
   ];
 
   const wordsList = document.getElementById("words-list");
