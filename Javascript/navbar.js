@@ -71,6 +71,7 @@ const mobileNavbarHTML = `
     <a href='spoofing.html' id='mobile-nav-spoofing'>Spoofing</a>
     <a href='offentligWifi.html' id='mobile-nav-wifi'>Offentlig WiFi</a>
     <a href='utpressing.html' id='mobile-nav-utpressing'>Utpressing</a>
+    <a href='quiz.html' id='mobile-nav-quiz'>Quiz</a>
     <a href='avslutning.html' id='mobile-nav-avslutning'>Avslutning</a>
   `;
 
